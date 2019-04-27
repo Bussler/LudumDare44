@@ -33,28 +33,25 @@ public class PlayerManager : MonoBehaviour{
 	
 		playerCurrentHealth = playerHealth;
 		
-		playerAbilities = new BaseEffect[1];
+		playerAbilities = new BaseEffect[2];
 
 		playerAbilities[0] = new AoESampleAbility(Instantiate(sprites, transform.position, sprites.transform.rotation), mainCamera, Instantiate(sprites2, transform.position, sprites.transform.rotation));
 		playerAbilities[0].start();
 		playerAbilities[0].displayEffect();
-	}
+
+        playerAbilities[1] = new HealEffect(10);
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		
-		
+
 		//show the display UI for the effect when time is freezed and an effect is selected
 		if(effectIndex != -1 && timeIsFreezed)
-			playerAbilities[0].displayEffect();
+			playerAbilities[effectIndex].displayEffect();
 		
 		if (playerCurrentHealth <= 0){
 			Die();
 		}
-		
-		//if the player pressed the confirmation button, the effect is played
-		if(playEffect)
-			playerAbilities[0].playEffect();
 		
 		
 		//player pressed ability button
@@ -62,14 +59,13 @@ public class PlayerManager : MonoBehaviour{
 			//was the player in realtime mode before?
 			if (canUseAbilities){
 				//yes -> freeze time if the timer is full
-				timeIsFreezed = true;
+				timeIsFreezed = true; // TODO actually freeze time
 				canUseAbilities = false;
 				effectTimer = 0;
 			}else if (timeIsFreezed){
 				//no -> time is already freezed
 				timeIsFreezed = false;	//unfreeze time
-				playerAbilities[0].playEffect();	//play the selected effect
-				playEffect = true;	
+				playerAbilities[effectIndex].playEffect();	//play the selected effect
 			}
 		}	
 	}
@@ -79,7 +75,7 @@ public class PlayerManager : MonoBehaviour{
 			effectTimer++;
 		}else
 			canUseAbilities = true;
-		Debug.Log(effectTimer);
+		//Debug.Log(effectTimer);
 	}
 
 
@@ -100,5 +96,6 @@ public class PlayerManager : MonoBehaviour{
 
 	public void chosenEffectCard(int index){
 		effectIndex = index;
+
 	}
 }

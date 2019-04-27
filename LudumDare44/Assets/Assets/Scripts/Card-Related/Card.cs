@@ -11,7 +11,8 @@ public class Card : ScriptableObject
     public Draggable.typeOfCard myType;
 
     //TODO link a effect script here
-    public DisplayCard.EffectType[] effects = new DisplayCard.EffectType[3];
+    //public DisplayCard.EffectType[] effects = new DisplayCard.EffectType[3];
+    public int effectID = 0;
 
     public int attack;
 
@@ -20,6 +21,7 @@ public class Card : ScriptableObject
     public void printInfo()
     {
         Debug.Log(cardName + ": " + description + " attack: " + attack);
+
     }
 
 }

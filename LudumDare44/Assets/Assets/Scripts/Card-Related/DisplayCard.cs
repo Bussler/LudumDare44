@@ -13,13 +13,15 @@ public class DisplayCard : MonoBehaviour
     public Text desc;
     public Text attack;
 
-    public enum EffectType //Link all the effects here
+    /*public enum EffectType //Link all the effects here
     {
         Nothing,
         Test
     }
 
-    public List<Cardeffect> BEffects = new List<Cardeffect>();
+    public List<Cardeffect> BEffects = new List<Cardeffect>();*/
+
+    public int effectID;
 
     public void applyInfo()
     {
@@ -35,11 +37,12 @@ public class DisplayCard : MonoBehaviour
         Sprite image = Resources.Load<Sprite>("tcgcardspack/" + imageName);
         this.transform.Find("CardImage").GetComponent<Image>().sprite = image;
 
-        createEffects();
+        effectID = card.effectID;
+        //createEffects();
 
     }
 
-    private void createEffects()
+    /*private void createEffects()
     {
         foreach (EffectType et in card.effects)
         {
@@ -60,7 +63,7 @@ public class DisplayCard : MonoBehaviour
         {
             ce.Apply();
         }
-    }
+    }*/
 
     public int getAttack()
     {
