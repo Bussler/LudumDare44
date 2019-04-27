@@ -16,11 +16,20 @@
               <e p="Draggable.cs" t="Include" />
               <e p="Dropzone.cs" t="Include" />
             </e>
-            <e p="Enemy.cs" t="Include" />
-            <e p="EnemyProjectile.cs" t="Include" />
-            <e p="Pattern.cs" t="Include" />
+            <e p="Enemy" t="Include">
+              <e p="DamagePlane.cs" t="Include" />
+              <e p="Enemy.cs" t="Include" />
+              <e p="EnemyProjectile.cs" t="Include" />
+              <e p="EnviormentalHazard.cs" t="Include" />
+              <e p="Obstacle.cs" t="Include" />
+              <e p="Pattern.cs" t="Include" />
+            </e>
             <e p="Player" t="Include">
               <e p="Movement.cs" t="Include" />
+              <e p="PlayerManager.cs" t="Include" />
+            </e>
+            <e p="Player Abilities" t="Include">
+              <e p="BaseEffect.cs" t="Include" />
             </e>
           </e>
         </e>

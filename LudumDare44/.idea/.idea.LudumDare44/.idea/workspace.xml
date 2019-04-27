@@ -4,13 +4,7 @@
     <list default="true" id="19e26bd5-3c07-480d-a78e-ba9e6a800e75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare44/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare44/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare44/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare44/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Card-Related/DeckDraw.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Card-Related/DeckDraw.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Card-Related/DisplayCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Card-Related/DisplayCard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Drag&amp;Drop.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Player/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Player/Movement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Sprites.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Personal Scenes/Luca.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Personal Scenes/Luca.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Personal Scenes/Morten.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Personal Scenes/Morten.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Card-Related/DeckDraw.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -56,13 +50,37 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player/PlayerManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player Abilities/BaseEffect.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <marker date="1556363451922" expanded="false" signature="6:78" ph="..." />
+                <marker date="1556363451922" expanded="true" signature="128:432" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player/PlayerManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Card-Related/DeckDraw.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player Abilities/BaseEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player/Movement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -70,6 +88,8 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Assets/Scripts/Player/Movement.cs" />
         <option value="$PROJECT_DIR$/Assets/Assets/Scripts/Card-Related/DeckDraw.cs" />
+        <option value="$PROJECT_DIR$/Assets/Assets/Scripts/Player Abilities/BaseEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Assets/Scripts/Player/PlayerManager.cs" />
       </list>
     </option>
   </component>
@@ -140,12 +160,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556353818077</updated>
-      <workItem from="1556353824883" duration="7367000" />
+      <workItem from="1556353824883" duration="8974000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7367000" />
+    <option name="totallyTimeSpent" value="8974000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -235,6 +255,24 @@
             <marker date="1556361199289" expanded="true" signature="303:482" ph="{...}" />
             <marker date="1556361199289" expanded="true" signature="533:826" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player Abilities/BaseEffect.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <marker date="1556363451922" expanded="false" signature="6:78" ph="..." />
+            <marker date="1556363451922" expanded="true" signature="128:432" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player/PlayerManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
         </state>
       </provider>
     </entry>
