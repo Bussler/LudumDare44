@@ -28,11 +28,15 @@ public class Movement : MonoBehaviour
 		//reset the velocity, so that the player does not move when no button is pressed
 			rigidbody.velocity = Vector3.zero;
 
+			//can the player dodge?
 			if (!canDodge)
+				//no -> subtract one from the timer
 				canDodgeTimer--;
-			if (canDodgeTimer < 0){
-				canDodgeTimer = 100;
-				canDodge = true;
+			//is the dodge timer <= 0?
+			if (canDodgeTimer <= 0){
+				//yes -> the cooldown has ended
+				canDodgeTimer = 100;	//reset timer
+				canDodge = true;		//activate dodge ability
 			}
 
 			//WASD movement
@@ -55,11 +59,14 @@ public class Movement : MonoBehaviour
 			if (rigidbody.velocity != Vector3.zero)
 				previousWalkDirection = rigidbody.velocity;
 			
-			//Multiply the walk speed with dodge speed in order to make a dodge roll
+			//Can the player dodge and did he press space button? 
 			if (canDodge && Input.GetKeyDown(KeyCode.Space)){
+				//yes -> is teh current velocity = (0,0,0)?
 				if(rigidbody.velocity == Vector3.zero)
+					//yes-> take the previous walking direction and dodge into that direction
 					rigidbody.velocity = previousWalkDirection * dodgeRollSpeed;
 				else
+					//no->dodge into the current waling direction 
 					rigidbody.velocity *= dodgeRollSpeed;
 				canDodge = false;
 			}
