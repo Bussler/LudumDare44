@@ -374,7 +374,7 @@ Rigidbody:
   m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!212 &720947929
@@ -447,7 +447,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb7750f09d19e37479349a81640ed4de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2
+  movementSpeed: 6
+  dodgeRollSpeed: 4
 --- !u!65 &720947932
 BoxCollider:
   m_ObjectHideFlags: 0
