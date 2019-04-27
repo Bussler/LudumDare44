@@ -11,7 +11,6 @@ public class DeckDraw : MonoBehaviour, IPointerClickHandler
     public GameObject cardPrefab;
 
     public void OnPointerClick(PointerEventData eventData){
-        Debug.Log("Haha");
         Card curCard = GameObject.Find("DeckManager").GetComponent<DeckManager>().drawCard(0);
         spawnCard(curCard, playerhand.transform);
     }

@@ -92,7 +92,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         //activate, destroy Effect Card
         if (lastParent!=originalParent)
         {
-            Debug.Log(this.GetComponent<DisplayCard>().getAttack() + " on: " + lastParent.name);
+           // Debug.Log(this.GetComponent<DisplayCard>().getAttack() + " on: " + lastParent.name);
             if(this.GetComponent<DisplayCard>().effectID != -1)
             GameObject.Find("Player").GetComponent<PlayerManager>().PlayEffect(this.GetComponent<DisplayCard>().effectID);
 

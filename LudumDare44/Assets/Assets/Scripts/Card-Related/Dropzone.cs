@@ -9,7 +9,7 @@ public class Dropzone : MonoBehaviour,  IDropHandler, IPointerEnterHandler, IPoi
 
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("Dropped");
+        //Debug.Log("Dropped");
         Draggable d = eventData.pointerDrag.GetComponent<Draggable>();// pointerDrag is the dragged object
         if (d!=null&&myDropType==d.myType)
         {
@@ -21,7 +21,7 @@ public class Dropzone : MonoBehaviour,  IDropHandler, IPointerEnterHandler, IPoi
     public void OnPointerEnter(PointerEventData eventData)
     {
         //glow if valid
-        Debug.Log("Enter");
+        //Debug.Log("Enter");
         //when entering a valid dropzone change the placeholderparent of the card to this obj, so that the cards can move away
         if (eventData.pointerDrag == null)
             return;
@@ -36,7 +36,7 @@ public class Dropzone : MonoBehaviour,  IDropHandler, IPointerEnterHandler, IPoi
     public void OnPointerExit(PointerEventData eventData)
     {
         //turn glow off, apply effect
-        Debug.Log("Exit");
+        //Debug.Log("Exit");
         //when exiting the valid dropzone
         if (eventData.pointerDrag == null)
             return;

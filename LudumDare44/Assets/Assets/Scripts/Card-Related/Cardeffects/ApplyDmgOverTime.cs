@@ -24,11 +24,14 @@ public class ApplyDmgOverTime : MonoBehaviour {
 
 	}
 
-    private void OnCollisionStay(Collision collision)
+
+    private void OnTriggerStay(Collider collision)
     {
         ElapsedInterval += Time.deltaTime;
         if (ElapsedInterval >= timeInterval)
         {
+            Debug.Log("Yeet");
+
             if (!doesDmg && collision.gameObject.name=="Player")
             {
                 PlayerManager plM = GameObject.FindObjectOfType<PlayerManager>();

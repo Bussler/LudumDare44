@@ -22,13 +22,12 @@ public class AOEDamage: BaseEffect {
         Vector2 m = Input.mousePosition;
         mousePosition = mainCamera.ScreenToWorldPoint(new Vector3(m.x, m.y, 10));
 
-        GameObject aoe = GameObject.Instantiate(groundAoe, mousePosition, Quaternion.Euler(90,0,0));
+        GameObject aoe = GameObject.Instantiate(groundAoe, new Vector3(mousePosition.x,0.5f, mousePosition.z) , Quaternion.Euler(90,0,0));
 
     }
 
     public override void start()
     {
-
     }
 
 }
