@@ -14,5 +14,6 @@ MonoBehaviour:
   cardName: Accurate Description
   description: Maarten is not at all narcisstic
   myType: 1
+  effectID: 2
   attack: 2
   imageName: Tex_Adventurer
