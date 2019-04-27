@@ -514,6 +514,8 @@ GameObject:
   - component: {fileID: 333344597}
   - component: {fileID: 333344596}
   - component: {fileID: 333344595}
+  - component: {fileID: 333344600}
+  - component: {fileID: 333344599}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -590,6 +592,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &333344599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 333344594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c5027fd2ed69b04bad1b6e403f9d29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myDropType: 1
+--- !u!65 &333344600
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 333344594}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &764007227
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,6 +748,11 @@ MonoBehaviour:
   mainCamera: {fileID: 764007229}
   sprites: {fileID: 1854933645464292, guid: 8c6043145a03bab499aa023f7f7119e2, type: 2}
   sprites2: {fileID: 1854933645464292, guid: 630da0ad2737bf944b6f72eb65332a6f, type: 2}
+  DmgAoe: {fileID: 1988563657131068, guid: 679580d2ce37d0e4493aa1b902747f04, type: 2}
+  HealAoe: {fileID: 1343646353800858, guid: 42cab319fbf64cf4a83a2c6128f2a8dc, type: 2}
+  FireBall: {fileID: 1968971035741248, guid: eea47941129de26499e1d5316a682662, type: 2}
+  cards: []
+  shop: {fileID: 0}
 --- !u!65 &934581922
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1083,6 +1114,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114363849697892426, guid: 41d0accab54f84246ac4ad679ead59f4,
+        type: 2}
+      propertyPath: PlayerDeck.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4065776010779670, guid: 41d0accab54f84246ac4ad679ead59f4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 942.803
@@ -1115,6 +1151,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114363849697892426, guid: 41d0accab54f84246ac4ad679ead59f4,
+        type: 2}
+      propertyPath: PlayerDeck.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: dcf080f2021194d41a4c2577919dbfec,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d0accab54f84246ac4ad679ead59f4, type: 2}
   m_IsPrefabAsset: 0

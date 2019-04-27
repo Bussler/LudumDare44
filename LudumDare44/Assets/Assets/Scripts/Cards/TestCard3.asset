@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Generous Offer
   description: Lets say you guys get 3% of our total ad-revenue
-  myType: 0
+  myType: 1
+  effectID: 3
   attack: 4
   imageName: Tex_Adventurer
