@@ -48,8 +48,8 @@ public class PlayerManager : MonoBehaviour{
         for (int i = 0; i < 3; i++){
 	        cards[i] = shopCards[i].GetComponent<Animator>();
         }
-        battleWon();
-        
+        //battleWon();
+
     }
 	
 	// Update is called once per frame
@@ -76,6 +76,7 @@ public class PlayerManager : MonoBehaviour{
             playerAbilities[i].playEffect();	//play the selected effect
 
             timeIsFreezed = false;
+            Time.timeScale = 1;
         }
     }
 
@@ -88,6 +89,8 @@ public class PlayerManager : MonoBehaviour{
             if (effectTimer>=100 && !timeIsFreezed)
             {
                 timeIsFreezed = true; //TODO actually freeze time
+                Time.timeScale = 0;
+
                 effectTimer = 0;
                 Debug.Log("Can use ability");
             }
