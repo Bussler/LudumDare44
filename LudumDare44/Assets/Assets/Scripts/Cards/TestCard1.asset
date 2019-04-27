@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecaf38aa4f2f6e64f8c58f30e310bf66, type: 3}
   m_Name: TestCard1
   m_EditorClassIdentifier: 
-  cardName: TestCard
-  description: AyyTest
+  cardName: Joke
+  description: I have to wear glasses, because I can't c#
   myType: 0
   attack: 1
   imageName: Tex_Adventurer
