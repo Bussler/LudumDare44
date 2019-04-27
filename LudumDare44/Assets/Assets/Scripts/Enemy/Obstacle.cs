@@ -5,6 +5,7 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour {
 
     public float speed;
+    public int damage;
 	// Use this for initialization
 	void Start () {
 		
@@ -14,4 +15,12 @@ public class Obstacle : MonoBehaviour {
 	void Update () {
         this.transform.Rotate(Vector3.up * speed * Time.deltaTime);
 	}
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            other.gameObject.GetComponent<PlayerManager>().TakeDamage(damage);
+        }
+    }
 }

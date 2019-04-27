@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyProjectile : MonoBehaviour {
     public float speed;
+    public int damage;
 
 	// Use this for initialization
 	void Start () {
@@ -14,4 +15,12 @@ public class EnemyProjectile : MonoBehaviour {
 	void Update () {
         this.transform.position += transform.TransformDirection(Vector3.forward) * speed * Time.deltaTime;
 	}
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            other.gameObject.GetComponent<PlayerManager>().TakeDamage(damage);
+        }
+    }
 }
