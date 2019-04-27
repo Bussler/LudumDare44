@@ -7,6 +7,7 @@ public class DamagePlane : MonoBehaviour {
     public float growTime;
     public float lifeTime;
     public int damage;
+    public float growthFactor;
     
 	// Use this for initialization
 	void Start () {
@@ -26,7 +27,7 @@ public class DamagePlane : MonoBehaviour {
     {
         for (int i = 0; i < 100; i++)
         {
-            Vector3 newScale = new Vector3(transform.localScale.x + 0.01f, transform.localScale.y + 0.01f, transform.localScale.z + 0.01f);
+            Vector3 newScale = new Vector3(transform.localScale.x + 0.01f*growthFactor, transform.localScale.y + 0.01f*growthFactor, transform.localScale.z + 0.01f*growthFactor);
             transform.localScale = newScale;
             yield return new WaitForSeconds(growTime / 100);
 
