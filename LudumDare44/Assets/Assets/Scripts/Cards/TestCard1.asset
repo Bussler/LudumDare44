@@ -14,5 +14,6 @@ MonoBehaviour:
   cardName: Joke
   description: I have to wear glasses, because I can't c#
   myType: 0
+  effects: 010000000000000000000000
   attack: 1
   imageName: Tex_Adventurer

@@ -80,6 +80,8 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         
         //activate Effect, schaden usw
         Debug.Log(this.GetComponent<DisplayCard>().getAttack() + " on: " + lastParent.name);
+        this.GetComponent<DisplayCard>().applyEffects();
+
         //TODO: Destroy card after used
 
         gameObject.GetComponent<CanvasGroup>().blocksRaycasts = true;

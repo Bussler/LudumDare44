@@ -10,8 +10,8 @@ public class Card : ScriptableObject
     public string description;
     public Draggable.typeOfCard myType;
 
-
     //TODO link a effect script here
+    public DisplayCard.EffectType[] effects = new DisplayCard.EffectType[3];
 
     public int attack;
 

@@ -86,6 +86,11 @@ public class Enemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        if (healthCurr <= 0)
+        {
+            Die();
+        }
+
         if (canFollowPlayer)
         {
            
@@ -212,6 +217,8 @@ public class Enemy : MonoBehaviour {
     }
 
 
+
+
     public void TakeDmage(float amount)
     {
 
@@ -219,6 +226,9 @@ public class Enemy : MonoBehaviour {
 
     }
 
-
+    public void Die()
+    {
+        Destroy(this.gameObject);
+    }
 
 }
