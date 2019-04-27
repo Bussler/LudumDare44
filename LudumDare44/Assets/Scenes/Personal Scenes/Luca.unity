@@ -366,9 +366,38 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 185925861}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 720947933}
+        m_MethodName: playCardBuy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!95 &185925858
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 185925856}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8a5b01fcc54176943ae7113d09f844b0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &185925861 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114012702430015516, guid: 032662415cb09864ab7d02f571215076,
@@ -763,9 +792,38 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 486410741}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 720947933}
+        m_MethodName: playCardBuy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!95 &486410738
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 486410736}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 911d89d49544fe847af7eb7605d695c4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &486410741 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114012702430015516, guid: 032662415cb09864ab7d02f571215076,
@@ -987,9 +1045,38 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 599340709}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 720947933}
+        m_MethodName: playCardBuy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!95 &599340706
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 599340704}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 911d89d49544fe847af7eb7605d695c4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &599340709 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114012702430015516, guid: 032662415cb09864ab7d02f571215076,
@@ -1231,7 +1318,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 696291820}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 720947933}
+        m_MethodName: continueButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &696291820
@@ -1404,6 +1502,13 @@ MonoBehaviour:
   mainCamera: {fileID: 322111585}
   sprites: {fileID: 1854933645464292, guid: 8c6043145a03bab499aa023f7f7119e2, type: 2}
   sprites2: {fileID: 1854933645464292, guid: 630da0ad2737bf944b6f72eb65332a6f, type: 2}
+  DmgAoe: {fileID: 0}
+  HealAoe: {fileID: 0}
+  cards:
+  - {fileID: 185925858}
+  - {fileID: 486410738}
+  - {fileID: 599340706}
+  shop: {fileID: 2012290648}
 --- !u!1 &970540261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,6 +1682,11 @@ Prefab:
         type: 2}
       propertyPath: m_LocalScale.z
       value: 0.8391445
+      objectReference: {fileID: 0}
+    - target: {fileID: 224855128476176914, guid: 032662415cb09864ab7d02f571215076,
+        type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114446429666506070, guid: 032662415cb09864ab7d02f571215076, type: 2}

@@ -39,6 +39,7 @@ public class PlayerManager : MonoBehaviour{
         playerAbilities[1] = new HealEffect(10);
         playerAbilities[2] = new AOEDamage(DmgAoe, mainCamera);
         playerAbilities[3] = new AOEDamage(HealAoe, mainCamera);
+        playShopFadeIn();
     }
 	
 	// Update is called once per frame
@@ -101,4 +102,37 @@ public class PlayerManager : MonoBehaviour{
 		//GameOver
 	}
 
+	
+	//---------------------------------------------------------------------
+	//						   CardShop Animation
+	//---------------------------------------------------------------------	
+
+	[SerializeField]
+	private Animator[] cards;
+	[SerializeField]
+	private Animator shop;
+	
+	private void playShopFadeIn(){
+		shop.SetTrigger("PlayFadeIn");
+	}
+
+	private void playShopFadeOut(){
+		shop.SetTrigger("PlayFadeOut");
+	}
+
+	public void playCardBuy(int cardIndex){
+		cards[cardIndex].SetTrigger("PlayBuyAnimation");
+	}
+
+	private void BuySceneEnded(){
+		for (int i = 0; i < 3; i++){
+			cards[i].SetTrigger("BuySceneEnded");
+		}
+	}
+
+	public void continueButton(){
+		playShopFadeOut();
+		BuySceneEnded();
+	}
+	
 }
