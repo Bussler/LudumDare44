@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19e26bd5-3c07-480d-a78e-ba9e6a800e75" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare44/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare44/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare44/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare44/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Card-Related/DeckDraw.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Card-Related/DeckDraw.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Card-Related/DisplayCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Card-Related/DisplayCard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Drag&amp;Drop.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Player/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Player/Movement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Personal Scenes/Luca.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Personal Scenes/Luca.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Personal Scenes/Morten.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Personal Scenes/Morten.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,22 +20,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player/Movement.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="892">
-              <caret line="68" column="65" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
+            <state relative-caret-position="937">
+              <caret line="71" column="34" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
               <folding>
-                <marker date="1556359482167" expanded="false" signature="6:78" ph="..." />
-                <marker date="1556359482167" expanded="true" signature="117:1994" ph="{...}" />
-                <marker date="1556359482167" expanded="true" signature="382:530" ph="{...}" />
-                <marker date="1556359482167" expanded="true" signature="590:1992" ph="{...}" />
-                <marker date="1556359482167" expanded="true" signature="876:1004" ph="{...}" />
-                <marker date="1556359482167" expanded="true" signature="1056:1120" ph="{...}" />
-                <marker date="1556359482167" expanded="true" signature="1153:1218" ph="{...}" />
-                <marker date="1556359482167" expanded="true" signature="1251:1318" ph="{...}" />
-                <marker date="1556359482167" expanded="true" signature="1351:1415" ph="{...}" />
-                <marker date="1556359482167" expanded="true" signature="1621:1989" ph="{...}" />
+                <marker date="1556359872272" expanded="false" signature="6:78" ph="..." />
+                <marker date="1556359872272" expanded="true" signature="117:2026" ph="{...}" />
+                <marker date="1556359872272" expanded="true" signature="382:530" ph="{...}" />
+                <marker date="1556359872272" expanded="true" signature="590:2024" ph="{...}" />
+                <marker date="1556359872272" expanded="true" signature="876:1004" ph="{...}" />
+                <marker date="1556359872272" expanded="true" signature="1056:1120" ph="{...}" />
+                <marker date="1556359872272" expanded="true" signature="1153:1218" ph="{...}" />
+                <marker date="1556359872272" expanded="true" signature="1251:1318" ph="{...}" />
+                <marker date="1556359872272" expanded="true" signature="1351:1415" ph="{...}" />
+                <marker date="1556359872272" expanded="true" signature="1621:2021" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Card-Related/DeckDraw.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="14" column="92" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="92" />
+              <folding>
+                <marker date="1556361199289" expanded="false" signature="6:110" ph="..." />
+                <marker date="1556361199289" expanded="true" signature="171:828" ph="{...}" />
+                <marker date="1556361199289" expanded="true" signature="303:482" ph="{...}" />
+                <marker date="1556361199289" expanded="true" signature="533:826" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -39,12 +62,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Card-Related/DeckDraw.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player/Movement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Assets/Scripts/Player/Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Assets/Scripts/Card-Related/DeckDraw.cs" />
       </list>
     </option>
   </component>
@@ -77,6 +102,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -114,12 +140,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556353818077</updated>
-      <workItem from="1556353824883" duration="5652000" />
+      <workItem from="1556353824883" duration="7367000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5652000" />
+    <option name="totallyTimeSpent" value="7367000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -137,7 +163,7 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Image Layers" />
       <window_info id="Capture Tool" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18877551" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="NuGet" order="0" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
@@ -182,19 +208,32 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player/Movement.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="892">
-          <caret line="68" column="65" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
+        <state relative-caret-position="937">
+          <caret line="71" column="34" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
           <folding>
-            <marker date="1556359482167" expanded="false" signature="6:78" ph="..." />
-            <marker date="1556359482167" expanded="true" signature="117:1994" ph="{...}" />
-            <marker date="1556359482167" expanded="true" signature="382:530" ph="{...}" />
-            <marker date="1556359482167" expanded="true" signature="590:1992" ph="{...}" />
-            <marker date="1556359482167" expanded="true" signature="876:1004" ph="{...}" />
-            <marker date="1556359482167" expanded="true" signature="1056:1120" ph="{...}" />
-            <marker date="1556359482167" expanded="true" signature="1153:1218" ph="{...}" />
-            <marker date="1556359482167" expanded="true" signature="1251:1318" ph="{...}" />
-            <marker date="1556359482167" expanded="true" signature="1351:1415" ph="{...}" />
-            <marker date="1556359482167" expanded="true" signature="1621:1989" ph="{...}" />
+            <marker date="1556359872272" expanded="false" signature="6:78" ph="..." />
+            <marker date="1556359872272" expanded="true" signature="117:2026" ph="{...}" />
+            <marker date="1556359872272" expanded="true" signature="382:530" ph="{...}" />
+            <marker date="1556359872272" expanded="true" signature="590:2024" ph="{...}" />
+            <marker date="1556359872272" expanded="true" signature="876:1004" ph="{...}" />
+            <marker date="1556359872272" expanded="true" signature="1056:1120" ph="{...}" />
+            <marker date="1556359872272" expanded="true" signature="1153:1218" ph="{...}" />
+            <marker date="1556359872272" expanded="true" signature="1251:1318" ph="{...}" />
+            <marker date="1556359872272" expanded="true" signature="1351:1415" ph="{...}" />
+            <marker date="1556359872272" expanded="true" signature="1621:2021" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Card-Related/DeckDraw.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" column="92" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="92" />
+          <folding>
+            <marker date="1556361199289" expanded="false" signature="6:110" ph="..." />
+            <marker date="1556361199289" expanded="true" signature="171:828" ph="{...}" />
+            <marker date="1556361199289" expanded="true" signature="303:482" ph="{...}" />
+            <marker date="1556361199289" expanded="true" signature="533:826" ph="{...}" />
           </folding>
         </state>
       </provider>

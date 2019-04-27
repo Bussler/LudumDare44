@@ -69,6 +69,7 @@ public class Movement : MonoBehaviour
 					//no->dodge into the current waling direction 
 					rigidbody.velocity *= dodgeRollSpeed;
 				canDodge = false;
+				Debug.Log("Player Dodged");
 			}
 	}
 }

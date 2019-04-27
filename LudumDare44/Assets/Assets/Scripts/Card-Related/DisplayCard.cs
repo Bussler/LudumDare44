@@ -37,7 +37,7 @@ public class DisplayCard : MonoBehaviour
 
         //set image
         Sprite image = Resources.Load<Sprite>("tcgcardspack/" + imageName);
-        this.transform.FindChild("CardImage").GetComponent<Image>().sprite = image;
+        this.transform.Find("CardImage").GetComponent<Image>().sprite = image;
 
     }
 
