@@ -46,7 +46,8 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
         gameObject.GetComponent<CanvasGroup>().blocksRaycasts = false; //turn responsibility to raycasts off, so that we see what zone/other stuff is beneat the card
 
-        GameObject.Find("Player").GetComponent<PlayerManager>().DisplayEffect(this.GetComponent<DisplayCard>().effectID); //activate the display
+        if (this.GetComponent<DisplayCard>().effectID != -1)
+            GameObject.Find("Player").GetComponent<PlayerManager>().DisplayEffect(this.GetComponent<DisplayCard>().effectID); //activate the display
     }
 
 
@@ -92,7 +93,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         if (lastParent!=originalParent)
         {
             Debug.Log(this.GetComponent<DisplayCard>().getAttack() + " on: " + lastParent.name);
-
+            if(this.GetComponent<DisplayCard>().effectID != -1)
             GameObject.Find("Player").GetComponent<PlayerManager>().PlayEffect(this.GetComponent<DisplayCard>().effectID);
 
             DeckManager.addGraveyard(this.GetComponent<DisplayCard>().card);
