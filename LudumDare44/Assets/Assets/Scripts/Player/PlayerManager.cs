@@ -26,9 +26,12 @@ public class PlayerManager : MonoBehaviour{
 	
 	[SerializeField] 
 	private GameObject sprites, sprites2, DmgAoe, HealAoe, FireBall;
+
+    [SerializeField]
+    private Canvas myCanvas;
 	
 	
-	
+
 	// Use this for initialization
 	void Start () {
 	
@@ -76,6 +79,7 @@ public class PlayerManager : MonoBehaviour{
             playerAbilities[i].playEffect();	//play the selected effect
 
             timeIsFreezed = false;
+            myCanvas.gameObject.SetActive(false);
             Time.timeScale = 1;
         }
     }
@@ -90,6 +94,7 @@ public class PlayerManager : MonoBehaviour{
             {
                 timeIsFreezed = true; //TODO actually freeze time
                 Time.timeScale = 0;
+                myCanvas.gameObject.SetActive(true);
 
                 effectTimer = 0;
                 Debug.Log("Can use ability");
