@@ -2,24 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamagePlane : MonoBehaviour {
+public class TeleportObstacle : MonoBehaviour {
 
     public float growTime;
-    public float lifeTime;
     public int damage;
-    
+
 	// Use this for initialization
 	void Start () {
         StartCoroutine("Grow");
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        lifeTime -= Time.deltaTime;
-        if (lifeTime <= 0)
-        {
-            Destroy(gameObject);
-        }
+		
 	}
 
     IEnumerator Grow()
@@ -31,6 +26,7 @@ public class DamagePlane : MonoBehaviour {
             yield return new WaitForSeconds(growTime / 100);
 
         }
+        Destroy(gameObject);
     }
 
     public void OnTriggerEnter(Collider other)

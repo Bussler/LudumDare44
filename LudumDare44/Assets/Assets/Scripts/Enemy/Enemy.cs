@@ -12,9 +12,11 @@ public class Enemy : MonoBehaviour {
     public bool canSpawnObstacle;
     public bool canSpawnDamagePlane;
     public bool canSpawnMinions;
+    public bool canTeleport;
 
     public float healthMax;
     private float healthCurr;
+    public int damage;
 
     public float timeBetweenAttacks;
 
@@ -39,6 +41,9 @@ public class Enemy : MonoBehaviour {
 
     public GameObject Minion;
 
+    public float timeBetweenTeleport;
+    public GameObject teleportMarker;
+    public GameObject teleportObstacle;
 
     private GameObject player;
     private NavMeshAgent agent;
@@ -79,7 +84,10 @@ public class Enemy : MonoBehaviour {
         {
             attacks.Add("SpawnMinon");
         }
-
+        if (canTeleport)
+        {
+            attacks.Add("Teleport");           
+        }
 
     }
 	
@@ -135,8 +143,12 @@ public class Enemy : MonoBehaviour {
                     break;
 
                 case "SpawnMinion":
-                    StartCoroutine(" SpawnMinion");
+                    StartCoroutine("SpawnMinion");
                    // isAttacking = false;
+                    break;
+
+                case "Teleport":
+                    StartCoroutine("Teleport");
                     break;
             }
 
@@ -216,7 +228,28 @@ public class Enemy : MonoBehaviour {
 
     }
 
+   IEnumerator  Teleport()
+    {
+        Vector3 teleportPoint = new Vector3(spawnColl.bounds.center.x + Random.Range(-0.4f * spawnColl.bounds.size.x, 0.4f * spawnColl.bounds.size.x), 0.5f, spawnColl.bounds.center.z + Random.Range(-0.4f * spawnColl.bounds.size.z, 0.4f * spawnColl.bounds.size.z));
+        this.transform.position = new Vector3(1000, 1, 1000);
+       GameObject m= Instantiate(teleportMarker,teleportPoint,Quaternion.identity);
+        yield return new WaitForSeconds(timeBetweenTeleport);
 
+        Destroy(m);
+        this.transform.position = teleportPoint;
+        Instantiate(teleportObstacle, this.transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.5f);
+        isAttacking = false;
+    }
+
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            other.gameObject.GetComponent<PlayerManager>().TakeDamage(damage);
+        }
+    }
 
 
     public void TakeDmage(float amount)
