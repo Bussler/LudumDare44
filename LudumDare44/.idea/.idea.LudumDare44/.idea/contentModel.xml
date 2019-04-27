@@ -10,6 +10,10 @@
           <e p="Scripts" t="Include">
             <e p="Card-Related" t="Include">
               <e p="Card.cs" t="Include" />
+              <e p="Cardeffects" t="Include">
+                <e p="Cardeffect.cs" t="Include" />
+                <e p="TestEffect.cs" t="Include" />
+              </e>
               <e p="DeckDraw.cs" t="Include" />
               <e p="DeckManager.cs" t="Include" />
               <e p="DisplayCard.cs" t="Include" />
@@ -29,7 +33,9 @@
               <e p="PlayerManager.cs" t="Include" />
             </e>
             <e p="Player Abilities" t="Include">
+              <e p="AoESampleAbility.cs" t="Include" />
               <e p="BaseEffect.cs" t="Include" />
+              <e p="EffectManager.cs" t="Include" />
             </e>
           </e>
         </e>

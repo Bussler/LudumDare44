@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 682dbe07f38b6c34bb5425f6fa6ad18b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - animator: {instanceID: 0}
+  - effectDisplaySprite: {fileID: 1854933645464292, guid: 8c6043145a03bab499aa023f7f7119e2,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
