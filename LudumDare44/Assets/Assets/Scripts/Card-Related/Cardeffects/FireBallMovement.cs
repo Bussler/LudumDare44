@@ -18,6 +18,12 @@ public class FireBallMovement : MonoBehaviour {
         if (ready)
         {
             this.transform.position = Vector3.Lerp(this.transform.position, Target, speed*Time.deltaTime);
+
+            float mag = Mathf.Abs(Vector3.Magnitude(new Vector2(transform.position.x, transform.position.z) - new Vector2(Target.x, Target.z)));
+            if (mag<=0.1)
+            {
+                Destroy(gameObject);
+            }
         }
 
 	}
@@ -34,7 +40,9 @@ public class FireBallMovement : MonoBehaviour {
         if (enemy != null)
         {
             enemy.TakeDmage(-dmg);
+            Destroy(gameObject);
         }
+        
     }
 
 }

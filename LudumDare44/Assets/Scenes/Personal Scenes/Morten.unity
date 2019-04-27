@@ -750,6 +750,9 @@ MonoBehaviour:
   sprites2: {fileID: 1854933645464292, guid: 630da0ad2737bf944b6f72eb65332a6f, type: 2}
   DmgAoe: {fileID: 1988563657131068, guid: 679580d2ce37d0e4493aa1b902747f04, type: 2}
   HealAoe: {fileID: 1343646353800858, guid: 42cab319fbf64cf4a83a2c6128f2a8dc, type: 2}
+  FireBall: {fileID: 1968971035741248, guid: eea47941129de26499e1d5316a682662, type: 2}
+  cards: []
+  shop: {fileID: 0}
 --- !u!65 &934581922
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1111,6 +1114,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114363849697892426, guid: 41d0accab54f84246ac4ad679ead59f4,
+        type: 2}
+      propertyPath: PlayerDeck.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4065776010779670, guid: 41d0accab54f84246ac4ad679ead59f4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 942.803
@@ -1143,6 +1151,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114363849697892426, guid: 41d0accab54f84246ac4ad679ead59f4,
+        type: 2}
+      propertyPath: PlayerDeck.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: dcf080f2021194d41a4c2577919dbfec,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d0accab54f84246ac4ad679ead59f4, type: 2}
   m_IsPrefabAsset: 0

@@ -23,7 +23,7 @@ public class PlayerManager : MonoBehaviour{
 	private bool playEffect = false;
 	
 	[SerializeField] 
-	private GameObject sprites, sprites2, DmgAoe, HealAoe;
+	private GameObject sprites, sprites2, DmgAoe, HealAoe, FireBall;
 	
 	
 	
@@ -32,14 +32,15 @@ public class PlayerManager : MonoBehaviour{
 	
 		playerCurrentHealth = playerHealth;
 		
-		playerAbilities = new BaseEffect[4];
+		playerAbilities = new BaseEffect[5];
 
 		//playerAbilities[0] = new AoESampleAbility(Instantiate(sprites, transform.position, sprites.transform.rotation), mainCamera, Instantiate(sprites2, transform.position, sprites.transform.rotation));
 
         playerAbilities[1] = new HealEffect(10);
         playerAbilities[2] = new AOEDamage(DmgAoe, mainCamera);
         playerAbilities[3] = new AOEDamage(HealAoe, mainCamera);
-        playShopFadeIn();
+        playerAbilities[4] = new FireBallSpawn(FireBall,mainCamera, this.transform);
+       // playShopFadeIn();
     }
 	
 	// Update is called once per frame
