@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class AoESampleAbility : BaseEffect {
 
-	public AoESampleAbility(GameObject sprite, Camera camera){
+	public AoESampleAbility(GameObject sprite, Camera camera, GameObject sprite2){
 		effectDisplaySprite = sprite;
+		effectPlaySprite = sprite2;
 		mainCamera = camera;
 	}
 	
@@ -21,11 +22,16 @@ public class AoESampleAbility : BaseEffect {
 		spritePrefab.enabled = true;
 		Vector2 m = Input.mousePosition;
 		mousePosition = mainCamera.ScreenToWorldPoint(new Vector3(m.x, m.y, 10));
-		Debug.Log("Coords:" + mousePosition.x + " " + mousePosition.z);
-		spriteTransform.position = mousePosition; //new Vector3(mousePosition.x, 2f, mousePosition.z);
+		spriteTransform.position = mousePosition;
 	}
 
 	public override void playEffect(){
-		throw new System.NotImplementedException();
+		spritePrefab.enabled = false;
+		spritePrefab = effectPlaySprite.GetComponent<SpriteRenderer>();
+		spriteTransform = effectPlaySprite.GetComponent<Transform>();
+		spritePrefab.enabled = true;
+		spriteTransform.Translate((mousePosition-spriteTransform.position)*Time.deltaTime * 1f);
 	}
+	
+	
 }

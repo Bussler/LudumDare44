@@ -12,8 +12,9 @@
        	
        	//sprite which displays how the ability works (e.g. for AoE the place it lands)
        	[SerializeField] 
-       	protected GameObject effectDisplaySprite;
+       	protected GameObject effectDisplaySprite, effectPlaySprite;
        
+        
        	protected SpriteRenderer spritePrefab;
        	protected Transform spriteTransform;
        	
@@ -21,5 +22,5 @@
        	public abstract void playEffect();
        
        	public abstract void start();
-       
+		
        }

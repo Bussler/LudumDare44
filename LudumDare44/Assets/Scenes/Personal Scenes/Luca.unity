@@ -761,6 +761,7 @@ MonoBehaviour:
   effectTimer: 0
   mainCamera: {fileID: 322111585}
   sprites: {fileID: 1854933645464292, guid: 8c6043145a03bab499aa023f7f7119e2, type: 2}
+  sprites2: {fileID: 1854933645464292, guid: 630da0ad2737bf944b6f72eb65332a6f, type: 2}
 --- !u!1 &2132734553
 GameObject:
   m_ObjectHideFlags: 0

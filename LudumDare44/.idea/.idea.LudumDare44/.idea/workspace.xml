@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19e26bd5-3c07-480d-a78e-ba9e6a800e75" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare44/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare44/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Drag&amp;Drop.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Player Abilities/AoESampleAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Player Abilities/AoESampleAbility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Player Abilities/BaseEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Player Abilities/BaseEffect.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Player/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Player/PlayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Shop.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Personal Scenes/Luca.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Personal Scenes/Luca.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player/PlayerManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+            <state relative-caret-position="749">
+              <caret line="82" column="5" lean-forward="true" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -61,28 +66,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player Abilities/BaseEffect.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+            <state relative-caret-position="300">
+              <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
               <folding>
-                <marker date="1556366934481" expanded="true" signature="6:82" ph="..." />
-                <marker date="1556366934481" expanded="true" signature="130:756" ph="{...}" />
+                <marker date="1556369657039" expanded="true" signature="6:82" ph="..." />
+                <marker date="1556369657039" expanded="true" signature="130:778" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player Abilities/AoESampleAbility.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="315">
+              <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
               <folding>
-                <marker date="1556367767429" expanded="false" signature="6:97" ph="..." />
-                <marker date="1556367767429" expanded="true" signature="142:942" ph="{...}" />
-                <marker date="1556367767429" expanded="true" signature="203:262" ph="{...}" />
-                <marker date="1556367767429" expanded="true" signature="296:506" ph="{...}" />
-                <marker date="1556367767429" expanded="true" signature="545:854" ph="{...}" />
-                <marker date="1556367767429" expanded="true" signature="890:940" ph="{...}" />
+                <marker date="1556371020351" expanded="false" signature="6:97" ph="..." />
+                <marker date="1556371020351" expanded="true" signature="142:1115" ph="{...}" />
+                <marker date="1556371020351" expanded="true" signature="223:312" ph="{...}" />
+                <marker date="1556371020351" expanded="true" signature="346:556" ph="{...}" />
+                <marker date="1556371020351" expanded="true" signature="595:785" ph="{...}" />
+                <marker date="1556371020351" expanded="true" signature="821:1109" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -108,8 +113,8 @@
         <option value="$PROJECT_DIR$/Assets/Assets/Scripts/Card-Related/DeckDraw.cs" />
         <option value="$PROJECT_DIR$/Assets/Assets/Scripts/Player Abilities/EffectManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Assets/Scripts/Player Abilities/BaseEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Assets/Scripts/Player Abilities/AoESampleAbility.cs" />
         <option value="$PROJECT_DIR$/Assets/Assets/Scripts/Player/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Assets/Scripts/Player Abilities/AoESampleAbility.cs" />
       </list>
     </option>
   </component>
@@ -180,12 +185,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556353818077</updated>
-      <workItem from="1556353824883" duration="14037000" />
+      <workItem from="1556353824883" duration="16253000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14037000" />
+    <option name="totallyTimeSpent" value="16253000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -203,7 +208,7 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Image Layers" />
       <window_info id="Capture Tool" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.098614074" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.098614074" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="NuGet" order="0" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
@@ -293,34 +298,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player Abilities/BaseEffect.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+        <state relative-caret-position="300">
+          <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
           <folding>
-            <marker date="1556366934481" expanded="true" signature="6:82" ph="..." />
-            <marker date="1556366934481" expanded="true" signature="130:756" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player Abilities/AoESampleAbility.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <marker date="1556367767429" expanded="false" signature="6:97" ph="..." />
-            <marker date="1556367767429" expanded="true" signature="142:942" ph="{...}" />
-            <marker date="1556367767429" expanded="true" signature="203:262" ph="{...}" />
-            <marker date="1556367767429" expanded="true" signature="296:506" ph="{...}" />
-            <marker date="1556367767429" expanded="true" signature="545:854" ph="{...}" />
-            <marker date="1556367767429" expanded="true" signature="890:940" ph="{...}" />
+            <marker date="1556369657039" expanded="true" signature="6:82" ph="..." />
+            <marker date="1556369657039" expanded="true" signature="130:778" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player/PlayerManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+        <state relative-caret-position="749">
+          <caret line="82" column="5" lean-forward="true" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player Abilities/AoESampleAbility.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+          <folding>
+            <marker date="1556371020351" expanded="false" signature="6:97" ph="..." />
+            <marker date="1556371020351" expanded="true" signature="142:1115" ph="{...}" />
+            <marker date="1556371020351" expanded="true" signature="223:312" ph="{...}" />
+            <marker date="1556371020351" expanded="true" signature="346:556" ph="{...}" />
+            <marker date="1556371020351" expanded="true" signature="595:785" ph="{...}" />
+            <marker date="1556371020351" expanded="true" signature="821:1109" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
