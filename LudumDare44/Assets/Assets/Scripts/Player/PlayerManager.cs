@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Experimental.PlayerLoop;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour{
 
@@ -15,11 +17,11 @@ public class PlayerManager : MonoBehaviour{
 	[SerializeField] 
 	private Camera mainCamera;
 	
-	private Boolean canUseAbilities, timeIsFreezed;
+	private bool canUseAbilities, timeIsFreezed;
 	
 	
 	private BaseEffect[] playerAbilities;
-
+	
 	private bool playEffect = false;
 	
 	[SerializeField] 
@@ -33,14 +35,21 @@ public class PlayerManager : MonoBehaviour{
 		playerCurrentHealth = playerHealth;
 		
 		playerAbilities = new BaseEffect[5];
-
+		
+		cards = new Animator[3];
+		
 		//playerAbilities[0] = new AoESampleAbility(Instantiate(sprites, transform.position, sprites.transform.rotation), mainCamera, Instantiate(sprites2, transform.position, sprites.transform.rotation));
 
         playerAbilities[1] = new HealEffect(10);
         playerAbilities[2] = new AOEDamage(DmgAoe, mainCamera);
         playerAbilities[3] = new AOEDamage(HealAoe, mainCamera);
         playerAbilities[4] = new FireBallSpawn(FireBall,mainCamera, this.transform);
-       // playShopFadeIn();
+
+        for (int i = 0; i < 3; i++){
+	        cards[i] = shopCards[i].GetComponent<Animator>();
+        }
+        battleWon();
+        
     }
 	
 	// Update is called once per frame
@@ -103,34 +112,65 @@ public class PlayerManager : MonoBehaviour{
 		//GameOver
 	}
 
+	//called from enemey, when its health is = 0
+	public void battleWon(){
+		
+		playShopFadeIn();
+	} 
+	
 	
 	//---------------------------------------------------------------------
-	//						   CardShop Animation
+	//						   		CardShop
 	//---------------------------------------------------------------------	
 
 	[SerializeField]
-	private Animator[] cards;
-	[SerializeField]
-	private Animator shop;
+	private GameObject[] shopCards;
 	
+	private Animator[] cards;
+	
+	[SerializeField]
+	private Animator shop, notEnoughHealth;
+
+	[SerializeField] private TextMeshProUGUI healthText;
+	
+	private string remHealth = "Remaining Health: ";
+	
+	//fades th whole sop in
 	private void playShopFadeIn(){
 		shop.SetTrigger("PlayFadeIn");
+		healthText.text = remHealth + playerCurrentHealth;
 	}
 
+	//fades the whole shop out
 	private void playShopFadeOut(){
 		shop.SetTrigger("PlayFadeOut");
 	}
 
+	//called when a player clicks a card
 	public void playCardBuy(int cardIndex){
-		cards[cardIndex].SetTrigger("PlayBuyAnimation");
+		//attack values is the cost value for this card
+		int cardCost = int.Parse(shopCards[cardIndex].GetComponent<DisplayCard>().attack.text);
+		//can the player buy teh card?
+		if (playerCurrentHealth >= cardCost){
+			//yes -> buy card
+			cards[cardIndex].SetTrigger("PlayBuyAnimation");	//buy animation
+			playerCurrentHealth -= cardCost;						//update health
+			healthText.text = remHealth + playerCurrentHealth;		//update text
+			//TODO Add the card at the index to the deck			
+		}else{
+			//no -> display a text stating that not enough health is available
+			notEnoughHealth.SetTrigger("NotEnoughHealth");
+		}
 	}
 
+	//triggers the state machine reset for the cards
 	private void BuySceneEnded(){
 		for (int i = 0; i < 3; i++){
 			cards[i].SetTrigger("BuySceneEnded");
 		}
 	}
 
+	//called by continue button
 	public void continueButton(){
 		playShopFadeOut();
 		BuySceneEnded();
