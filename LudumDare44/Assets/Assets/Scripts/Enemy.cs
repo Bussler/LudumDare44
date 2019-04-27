@@ -17,17 +17,23 @@ public class Enemy : MonoBehaviour {
     public float timeBetweenAttacks;
 
     public List<string> attacks;
-    private float time = 0;
+    public float time = 0;
     private bool isAttacking= false;
 
     public GameObject SingleProjectile;
     public GameObject PatternProjectile;
+
+    public Pattern[] patterns;
+    public int patternsPerAttack;
+    public float timeBetweenPatterns;
 
 
     public GameObject Obstacle;
 
 
     private GameObject player;
+
+  
 
 	// Use this for initialization
 	void Start () {
@@ -65,11 +71,13 @@ public class Enemy : MonoBehaviour {
         }
         if(time >= timeBetweenAttacks)
         {
+            Debug.Log("Attack");
             time = 0;
-
+            isAttacking = true;
             int x = Random.Range(0, attacks.Count);
 
             string s = attacks[x];
+            Debug.Log(s);
             switch (s)
             {
 
@@ -78,7 +86,7 @@ public class Enemy : MonoBehaviour {
                     break;
 
                 case "ShootPattern":
-                    ShootPattern();
+                   StartCoroutine( "ShootPattern");
                     break;
 
                 case "Charge":
@@ -100,13 +108,27 @@ public class Enemy : MonoBehaviour {
 
     public void ShootProjectile()
     {
-
+        Debug.Log("ShootProjectile");
       GameObject p=  Instantiate(SingleProjectile, this.transform.position, Quaternion.identity);
         p.transform.LookAt(player.transform);
+        isAttacking = false;
     }
 
-    public void ShootPattern()
+   IEnumerator ShootPattern()
     {
+        Debug.Log("ShootPattern");
+
+        for (int i=0; i <  patternsPerAttack; i++)
+        {
+
+            for(int l =0; l< patterns[i].patternPoint.Length; l++)
+            {
+                Instantiate(PatternProjectile, patterns[i].patternPoint[l].position, patterns[i].patternPoint[l].rotation);
+                
+            }
+            yield return new WaitForSeconds(timeBetweenPatterns);
+        }
+        isAttacking = false;
 
     }
 
@@ -117,6 +139,7 @@ public class Enemy : MonoBehaviour {
 
     public void SpawnObstacle()
     {
+       GameObject o= Instantiate(Obstacle, this.transform.position, Quaternion.identity);
 
     }
 
