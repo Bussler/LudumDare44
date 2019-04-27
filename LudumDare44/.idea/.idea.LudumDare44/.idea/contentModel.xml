@@ -8,7 +8,16 @@
       <e p="Assets" t="Include">
         <e p="Assets" t="Include">
           <e p="Scripts" t="Include">
+            <e p="Drag&amp;Drop" t="Include">
+              <e p="Card.cs" t="Include" />
+              <e p="DeckDraw.cs" t="Include" />
+              <e p="DisplayCard.cs" t="Include" />
+              <e p="Draggable.cs" t="Include" />
+              <e p="Dropzone.cs" t="Include" />
+            </e>
             <e p="Enemy.cs" t="Include" />
+            <e p="EnemyProjectile.cs" t="Include" />
+            <e p="Pattern.cs" t="Include" />
             <e p="Player" t="Include">
               <e p="Movement.cs" t="Include" />
             </e>
