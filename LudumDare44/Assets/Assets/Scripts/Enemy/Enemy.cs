@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour {
     public float healthMax;
     private float healthCurr;
     public int damage;
+    public float speed;
 
     public float timeBetweenAttacks;
 
@@ -45,6 +46,9 @@ public class Enemy : MonoBehaviour {
     public GameObject teleportMarker;
     public GameObject teleportObstacle;
 
+    public float ChargeSpeed;
+    private bool isCharging;
+
     private GameObject player;
     private NavMeshAgent agent;
   
@@ -54,6 +58,7 @@ public class Enemy : MonoBehaviour {
         healthCurr = healthMax;
         player = GameObject.FindGameObjectWithTag("Player");
         agent = this.GetComponent<NavMeshAgent>();
+        agent.speed = speed;
         if (canFollowPlayer)
         {
             agent.enabled = true;
@@ -94,12 +99,14 @@ public class Enemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+
+
         if (healthCurr <= 0)
         {
             Die();
         }
 
-        if (canFollowPlayer)
+        if (canFollowPlayer && !isAttacking) 
         {
            
             agent.destination = player.transform.position;
@@ -117,7 +124,7 @@ public class Enemy : MonoBehaviour {
             int x = Random.Range(0, attacks.Count);
 
             string s = attacks[x];
-            Debug.Log(s);
+            //Debug.Log(s);
             switch (s)
             {
 
@@ -155,7 +162,21 @@ public class Enemy : MonoBehaviour {
 
         }
 
-
+        if (isCharging)
+        {
+            Debug.Log((agent.destination - this.transform.position).magnitude);
+            if((agent.destination- this.transform.position).magnitude <= 0.5f)
+            {
+                Debug.Log("EndCharge");
+                agent.speed = speed;
+                isAttacking = false;
+               isCharging = false;
+                if (!canFollowPlayer)
+                {
+                    agent.enabled = false;
+                }
+            }
+        }
 
 	}
 
@@ -176,7 +197,7 @@ public class Enemy : MonoBehaviour {
 
             for(int l =0; l< patterns[i].patternPoint.Length; l++)
             {
-                Instantiate(PatternProjectile, patterns[i].patternPoint[l].position, patterns[i].patternPoint[l].rotation);
+                Instantiate(PatternProjectile, this.transform.position+patterns[i].patternPoint[l].position, patterns[i].patternPoint[l].rotation);
                 
             }
             yield return new WaitForSeconds(timeBetweenPatterns);
@@ -187,7 +208,11 @@ public class Enemy : MonoBehaviour {
 
     public void Charge()
     {
-
+        Debug.Log("ChargeFunc");
+        agent.enabled = true;
+        agent.destination = player.transform.position+3*(player.transform.position-this.transform.position).normalized;
+        agent.speed = ChargeSpeed;
+        isCharging = true;
     }
 
     IEnumerator SpawnObstacle()
