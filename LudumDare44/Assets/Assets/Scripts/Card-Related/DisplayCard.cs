@@ -13,17 +13,13 @@ public class DisplayCard : MonoBehaviour
     public Text desc;
     public Text attack;
 
-    public enum EffectType
+    public enum EffectType //Link all the effects here
     {
         Nothing,
-        Draw,
-        Discard,
-        DiscardDraw,
-        Skip
+        Test
     }
 
-    //public List<BattlecryEffect> BEffects = new List<BattlecryEffect>();
-    //public List<DiscardEffect> DEffects = new List<DiscardEffect>();
+    public List<Cardeffect> BEffects = new List<Cardeffect>();
 
     public void applyInfo()
     {
@@ -39,6 +35,31 @@ public class DisplayCard : MonoBehaviour
         Sprite image = Resources.Load<Sprite>("tcgcardspack/" + imageName);
         this.transform.Find("CardImage").GetComponent<Image>().sprite = image;
 
+        createEffects();
+
+    }
+
+    private void createEffects()
+    {
+        foreach (EffectType et in card.effects)
+        {
+            switch (et)
+            {
+                case EffectType.Test: BEffects.Add(new TestEffect());
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    }
+
+    public void applyEffects()
+    {
+        foreach(Cardeffect ce in BEffects)
+        {
+            ce.Apply();
+        }
     }
 
     public int getAttack()
