@@ -14,10 +14,14 @@ public class PlayerManager : MonoBehaviour{
 	[SerializeField] 
 	private Camera mainCamera;
 	
-	private Boolean canUseAbilities;
+	private Boolean canUseAbilities, timeIsFreezed;
+
+	private int effectIndex;
 	
 	private BaseEffect[] playerAbilities;
 
+	
+	
 	[SerializeField] 
 	private GameObject sprites;
 	
@@ -37,6 +41,9 @@ public class PlayerManager : MonoBehaviour{
 	
 	// Update is called once per frame
 	void Update () {
+		if(timeIsFreezed && effectIndex != -1)
+			playerAbilities[effectIndex].displayEffect();
+		i
 		playerAbilities[0].displayEffect();
 		if (playerCurrentHealth <= 0)
 		{
@@ -58,5 +65,8 @@ public class PlayerManager : MonoBehaviour{
 	{
 		//GameOver
 	}
-	
+
+	public static void chosenEffectCard(int index){
+		effecIndex = index;
+	}
 }
