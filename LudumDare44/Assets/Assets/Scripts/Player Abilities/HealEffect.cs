@@ -24,6 +24,7 @@ public class HealEffect : BaseEffect {
             plM.GetHealth(HealAmount);
             Debug.Log("Player healed");
         }
+
     }
 
     public override void start()

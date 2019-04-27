@@ -14,10 +14,13 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     public Transform currentDropzone = null;//set on dragzone when entering a new draggable zone, so that the right gameobjects are shifted; currently hovering dropzone
 
+    public Transform originalParent=null;
+
     public enum typeOfCard
     {
         Monster, //On enemy
-        Spell //on self
+        Spell, //on self
+        SelfSpell
     };
 
     public typeOfCard myType=typeOfCard.Monster;
@@ -37,10 +40,14 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
         //grab the point to return to if invalid drop and delete the gameobject of the current hand layout
         lastParent = this.transform.parent;
+        originalParent = this.transform.parent;
         currentDropzone = lastParent;
         this.transform.SetParent(this.transform.parent.parent);
 
         gameObject.GetComponent<CanvasGroup>().blocksRaycasts = false; //turn responsibility to raycasts off, so that we see what zone/other stuff is beneat the card
+
+        if (this.GetComponent<DisplayCard>().effectID != -1)
+            GameObject.Find("Player").GetComponent<PlayerManager>().DisplayEffect(this.GetComponent<DisplayCard>().effectID); //activate the display
     }
 
 
@@ -77,18 +84,23 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     {
         this.transform.SetParent(lastParent);
         this.transform.SetSiblingIndex(placeholder.transform.GetSiblingIndex());
-        
-        //activate Effect, schaden usw
-        Debug.Log(this.GetComponent<DisplayCard>().getAttack() + " on: " + lastParent.name);
-        //this.GetComponent<DisplayCard>().applyEffects();
-
-        //Change the currently activated effect id
-        GameObject.Find("Player").GetComponent<PlayerManager>().chosenEffectCard(this.GetComponent<DisplayCard>().effectID);
 
         gameObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
 
         Destroy(placeholder);
-        //TODO: Destroy card after used
+
+        //activate, destroy Effect Card
+        if (lastParent!=originalParent)
+        {
+            Debug.Log(this.GetComponent<DisplayCard>().getAttack() + " on: " + lastParent.name);
+            if(this.GetComponent<DisplayCard>().effectID != -1)
+            GameObject.Find("Player").GetComponent<PlayerManager>().PlayEffect(this.GetComponent<DisplayCard>().effectID);
+
+            DeckManager.addGraveyard(this.GetComponent<DisplayCard>().card);
+            Destroy(this.gameObject);
+
+        }
+        
     }
 
 }
