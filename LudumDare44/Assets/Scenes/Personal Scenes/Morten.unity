@@ -491,6 +491,11 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: -333
       objectReference: {fileID: 0}
+    - target: {fileID: 114089301115998364, guid: d4af5960a7f7c534fa68c8988d2c9c64,
+        type: 2}
+      propertyPath: myDropType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4af5960a7f7c534fa68c8988d2c9c64, type: 2}
   m_IsPrefabAsset: 0
@@ -692,7 +697,7 @@ MonoBehaviour:
   playerHealth: 0
   playerDamage: 0
   effectTimer: 0
-  mainCamera: {fileID: 0}
+  mainCamera: {fileID: 764007229}
   sprites: {fileID: 1854933645464292, guid: 8c6043145a03bab499aa023f7f7119e2, type: 2}
   sprites2: {fileID: 1854933645464292, guid: 630da0ad2737bf944b6f72eb65332a6f, type: 2}
 --- !u!65 &934581922

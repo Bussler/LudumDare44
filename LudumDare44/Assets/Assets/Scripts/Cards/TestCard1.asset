@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Joke
   description: I have to wear glasses, because I can't c#
-  myType: 0
-  effects: 010000000000000000000000
+  myType: 2
+  effectID: 1
   attack: 1
   imageName: Tex_Adventurer

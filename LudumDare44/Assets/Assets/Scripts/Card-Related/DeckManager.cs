@@ -8,7 +8,7 @@ public class DeckManager : MonoBehaviour {
 
     private List<Card> OriginalDeck;
 
-    public static List<Card> Graveyard;
+    public static List<Card> Graveyard=new List<Card>();
 
     private void Start()
     {
@@ -23,7 +23,6 @@ public class DeckManager : MonoBehaviour {
         if (PlayerDeck.Count <= 0)
         {
             resetDeck();
-
         }
         return curCard;
     }
@@ -31,7 +30,6 @@ public class DeckManager : MonoBehaviour {
     public static void addGraveyard(Card card)
     {
         Graveyard.Add(card);
-
     }
 
     public void shuffle<T>(List<T> list)
