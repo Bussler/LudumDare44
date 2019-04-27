@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4999598362738828}
   - component: {fileID: 212417167815373676}
+  - component: {fileID: 114593374779196504}
+  - component: {fileID: 135902044368225732}
   m_Layer: 0
   m_Name: DmgAoe
   m_TagString: Untagged
@@ -40,6 +42,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &114593374779196504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1988563657131068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0281724d665e1e45bf9b912dcfa8922, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 5
+  dmg: 1
+  doesDmg: 1
+--- !u!135 &135902044368225732
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1988563657131068}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.100000024
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212417167815373676
 SpriteRenderer:
   m_ObjectHideFlags: 1
