@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour
 	private Vector3 previousWalkDirection;
 	private Rigidbody rigidbody;
 
-	private int canDodgeTimer = 100;
+	private int canDodgeTimer = 50;
 
 	private bool canDodge = true;
 	// Use this for initialization
@@ -35,7 +35,7 @@ public class Movement : MonoBehaviour
 			//is the dodge timer <= 0?
 			if (canDodgeTimer <= 0){
 				//yes -> the cooldown has ended
-				canDodgeTimer = 100;	//reset timer
+				canDodgeTimer = 50;	//reset timer
 				canDodge = true;		//activate dodge ability
 			}
 

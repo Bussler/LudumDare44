@@ -39,15 +39,15 @@ public class PlayerManager : MonoBehaviour{
 
     [SerializeField]
     private RectTransform healthBar;
-	
 
-	// Use this for initialization
-	void Start () {
+    [SerializeField]
+    private RectTransform limitBar;
+
+
+    // Use this for initialization
+    void Start () {
 		
 		playerCurrentHealth = playerHealth;
-
-        TakeDamage(30);
-
 		
 		playerAbilities = new BaseEffect[8];
 		
@@ -108,6 +108,7 @@ public class PlayerManager : MonoBehaviour{
 		if (effectTimer < LimitGougeTimer)
         {
 			effectTimer++;
+            limitBar.sizeDelta = new Vector2(effectTimer, healthBar.sizeDelta.y);
         }
         else
         {
@@ -120,6 +121,7 @@ public class PlayerManager : MonoBehaviour{
                 GameObject.Find("DeckManager").GetComponent<DeckManager>().handleHand(); //redraw cards
 
                 effectTimer = 0;
+                limitBar.sizeDelta = new Vector2(effectTimer, healthBar.sizeDelta.y);
                 Debug.Log("Can use ability");
 
             }

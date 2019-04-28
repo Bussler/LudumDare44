@@ -96,9 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 448b2574f13b1554eb718ab9c13a199d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 10
+  playerHealth: 200
   playerDamage: 1
-  LimitGougeTimer: 100
+  LimitGougeTimer: 200
   mainCamera: {fileID: 0}
   sprites: {fileID: 1854933645464292, guid: 8c6043145a03bab499aa023f7f7119e2, type: 2}
   sprites2: {fileID: 1854933645464292, guid: 630da0ad2737bf944b6f72eb65332a6f, type: 2}
@@ -110,6 +110,8 @@ MonoBehaviour:
     type: 2}
   myCanvas: {fileID: 0}
   deckManager: {fileID: 0}
+  healthBar: {fileID: 0}
+  limitBar: {fileID: 0}
   victorySound: {fileID: 0}
   shopCards:
   - {fileID: 0}
