@@ -70,9 +70,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 5
-  dmg: 10
+  dmg: 15
   doesDmg: 1
-  timeInterval: 0.5
+  timeInterval: 1
 --- !u!135 &135902044368225732
 SphereCollider:
   m_ObjectHideFlags: 1
