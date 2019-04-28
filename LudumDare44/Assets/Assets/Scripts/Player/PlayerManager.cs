@@ -282,10 +282,11 @@ public class PlayerManager : MonoBehaviour{
 		playerCurrentHealth = playerHealth;
 		transform.position = new Vector3(-67, 1, 0);
 		playerMovementScript.reset();
-		for(int i = 0; i < myCanvas.transform.childCount; i++){
-			Destroy(myCanvas.transform.GetChild(0));
+		for(int i = 0; i <= myCanvas.transform.childCount; i++){
+            GameObject cur = myCanvas.transform.GetChild(0).gameObject;
+            cur.transform.SetParent(cur.transform.parent.parent);
+            Destroy(cur);
 		}
-	
 		
 	}
 
