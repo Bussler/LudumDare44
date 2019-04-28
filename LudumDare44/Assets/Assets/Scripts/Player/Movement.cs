@@ -13,7 +13,7 @@ public class Movement : MonoBehaviour
 	private Rigidbody rigidbody;
 
 	private int canDodgeTimer = 50;
-
+	private Animator playerAnimator;
 	private bool canDodge = true;
 	// Use this for initialization
 	void Start (){
@@ -21,6 +21,7 @@ public class Movement : MonoBehaviour
 		rigidbody = GetComponent<Rigidbody>();
 		if(rigidbody == null)
 			Debug.LogError("No Rigidbody2D on object");
+		playerAnimator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -55,7 +56,9 @@ public class Movement : MonoBehaviour
 			if (Input.GetKey(KeyCode.S)){
 				rigidbody.velocity += (Vector3.back * movementSpeed);
 			}
-
+		
+			playerAnimator.SetFloat("velocity", rigidbody.velocity.magnitude);
+			
 			if (rigidbody.velocity != Vector3.zero)
 				previousWalkDirection = rigidbody.velocity;
 			

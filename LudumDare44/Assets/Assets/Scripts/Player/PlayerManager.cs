@@ -76,8 +76,8 @@ public class PlayerManager : MonoBehaviour{
         }
         
         currentBossPrefab = currentBossPrefab = Instantiate(enemies[currentBoss], new Vector3(0, 1, 0), enemies[currentBoss].transform.rotation);
-        
-		//battleWon();
+        playerAnimator = GetComponent<Animator>();
+        //battleWon();
     }
 	
 	// Update is called once per frame
@@ -280,5 +280,12 @@ public class PlayerManager : MonoBehaviour{
 		currentBoss = newBoss;
 	}
 	
+	//---------------------------------------------------------------------
+    //						   		Player Amiations
+    //---------------------------------------------------------------------
+
+
+    private Animator playerAnimator;
 	
+
 }
