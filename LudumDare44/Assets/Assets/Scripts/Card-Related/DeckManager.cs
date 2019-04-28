@@ -10,6 +10,12 @@ public class DeckManager : MonoBehaviour {
 
     public static List<Card> Graveyard=new List<Card>();
 
+    public GameObject playerHand;
+
+    public GameObject cardPrefab;
+
+    public int handSize;
+
     private void Start()
     {
         OriginalDeck = new List<Card>(PlayerDeck);
@@ -57,6 +63,30 @@ public class DeckManager : MonoBehaviour {
     {
         PlayerDeck = new List<Card>(OriginalDeck);
         shuffle(PlayerDeck);//shuffle
+    }
+
+    public void handleHand()//manage the hand size, so that we always haave the right amount of cards
+    {
+        //lookup the hand and spawn cards accordingly
+        int amtChild = playerHand.transform.childCount;
+        for (int i=amtChild;i<handSize;i++)
+        {
+            spawnCard(drawCard(0));
+        }
+
+    }
+
+
+    public void spawnCard(Card c)
+    {
+        GameObject card = Instantiate(cardPrefab) as GameObject;
+
+        card.transform.SetParent(playerHand.transform);
+
+        card.GetComponent<DisplayCard>().card = c;
+        card.GetComponent<DisplayCard>().applyInfo();
+        
+        card.transform.localScale = new Vector3(1, 1, 1);
     }
 
 }

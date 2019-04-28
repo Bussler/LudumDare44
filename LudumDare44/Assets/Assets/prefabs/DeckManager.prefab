@@ -55,3 +55,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 05c508ff09924024c88381ef04223720, type: 2}
   - {fileID: 11400000, guid: 4666306cc14a8574dae32763838fd956, type: 2}
   - {fileID: 11400000, guid: e4e93b4c2c228a84080de31790df1849, type: 2}
+  - {fileID: 11400000, guid: dcf080f2021194d41a4c2577919dbfec, type: 2}
+  playerHand: {fileID: 0}
+  cardPrefab: {fileID: 1858156439483192, guid: 032662415cb09864ab7d02f571215076, type: 2}
+  handSize: 4
