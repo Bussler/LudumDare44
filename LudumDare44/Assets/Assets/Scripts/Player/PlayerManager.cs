@@ -152,7 +152,7 @@ public class PlayerManager : MonoBehaviour{
 
 	public void Die()
 	{
-		//GameOver
+		//TODO GameOver
 	}
 
 	//called from enemey, when its health is = 0

@@ -18,7 +18,7 @@ public class Obstacle : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.name == "Player")
         {
             other.gameObject.GetComponent<PlayerManager>().TakeDamage(damage);
         }
