@@ -35,13 +35,19 @@ public class FireBallMovement : MonoBehaviour {
         ready = true;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-        if (enemy != null)
+        if (collision.gameObject.tag == "Enemy")
         {
-            enemy.TakeDmage(-dmg);
-            Destroy(gameObject);
+
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            if (enemy != null)
+            {   
+                enemy.TakeDmage(-dmg);
+                Destroy(gameObject);
+
+            }
+
         }
         
     }

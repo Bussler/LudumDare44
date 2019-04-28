@@ -42,7 +42,6 @@ public class ShieldArea : MonoBehaviour {
     private void OnDestroy()
     {
         GameObject.Find("Player").GetComponent<BoxCollider>().enabled = true;
-
     }
 
 }

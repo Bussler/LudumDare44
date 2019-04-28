@@ -98,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1401087994134866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2519535, y: 1, z: -0.032739043}
+  m_LocalPosition: {x: -19.015148, y: 1.0000001, z: -2.1038208}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4165364814554160}
@@ -158,7 +158,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 5, y: 2, z: 6}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114335287383977896
 MonoBehaviour:
@@ -199,7 +199,6 @@ MonoBehaviour:
   growTime: 1
   DamagePlane: {fileID: 1866181348218324, guid: efc0738b25e1cdd46b2160a61d2a1c82,
     type: 2}
-  spawnColl: {fileID: 65175611077344704, guid: f4a22ebbee07c9b4e829787ece361b05, type: 2}
   Minion: {fileID: 0}
   timeBetweenTeleport: 2
   teleportMarker: {fileID: 1944552808410804, guid: fb1f94f1706b0df4d8ff8bbb93073f90,

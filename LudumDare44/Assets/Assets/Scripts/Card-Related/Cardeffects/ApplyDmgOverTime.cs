@@ -41,13 +41,16 @@ public class ApplyDmgOverTime : MonoBehaviour {
                     Debug.Log("Player healed");
                 }
             }
-            if (doesDmg)
+            if (doesDmg && collision.gameObject.tag == "Enemy")
             {
-                Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-                if (enemy != null)
-                {
-                    enemy.TakeDmage(-dmg);
-                }
+                Debug.Log("detected enemy");
+                    Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+                    if (enemy != null)
+                    {
+                        Debug.Log("Success aoe damage!");
+                        enemy.TakeDmage(-dmg);
+                    }
+                
             }
 
             ElapsedInterval = 0f;
