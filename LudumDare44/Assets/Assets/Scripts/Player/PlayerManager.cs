@@ -160,6 +160,7 @@ public class PlayerManager : MonoBehaviour{
 		if (playerCurrentHealth > playerHealth)
 			playerCurrentHealth = playerHealth;
         healthBar.sizeDelta = new Vector2(playerCurrentHealth, healthBar.sizeDelta.y);
+
     }
 
 	public void Die()
