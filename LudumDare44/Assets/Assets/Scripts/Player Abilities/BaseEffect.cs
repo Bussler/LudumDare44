@@ -2,7 +2,7 @@
  using System.Collections.Generic;
    using UnityEngine;
        
-       public abstract class BaseEffect{
+       public abstract class BaseEffect: MonoBehaviour{
        	//animator for possible animations
        	[SerializeField]
        	protected Animator animator;
