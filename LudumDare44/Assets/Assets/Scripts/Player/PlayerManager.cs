@@ -57,7 +57,7 @@ public class PlayerManager : MonoBehaviour{
 	        cards[i] = shopCards[i].GetComponent<Animator>();
         }
 
-
+		resetLevel();
     }
 	
 	// Update is called once per frame
@@ -66,7 +66,6 @@ public class PlayerManager : MonoBehaviour{
 		if (playerCurrentHealth <= 0){
 			Die();
 		}
-		
 	}
 
     public void DisplayEffect(int i)
@@ -160,6 +159,7 @@ public class PlayerManager : MonoBehaviour{
 	//fades the whole shop out
 	private void playShopFadeOut(){
 		shop.SetTrigger("PlayFadeOut");
+		resetLevel();
 	}
 
 	//called when a player clicks a card
@@ -190,6 +190,21 @@ public class PlayerManager : MonoBehaviour{
 	public void continueButton(){
 		playShopFadeOut();
 		BuySceneEnded();
+	}
+	
+	//---------------------------------------------------------------------
+	//						   		Level Change
+	//---------------------------------------------------------------------	
+
+	[SerializeField]
+	private Animator fadeOutAnimator;
+
+	private void resetLevel(){
+		fadeOutAnimator.SetTrigger("PlayFadeOut");
+		//resetPlayer
+		//chooseNewBoss
+		//resetLevel
+		fadeOutAnimator.SetTrigger("PlayFadeIn");
 	}
 	
 }
