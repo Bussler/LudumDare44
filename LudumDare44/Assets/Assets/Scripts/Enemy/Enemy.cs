@@ -31,14 +31,14 @@ public class Enemy : MonoBehaviour {
     public Pattern[] patterns;
     public int patternsPerAttack;
     public float timeBetweenPatterns;
-
+    
 
     public GameObject Obstacle;
     public float obstacleActiveTime;
     public float growTime;
 
     public GameObject DamagePlane;
-    public BoxCollider spawnColl;
+    private BoxCollider spawnColl;
 
     public GameObject Minion;
 
@@ -54,7 +54,8 @@ public class Enemy : MonoBehaviour {
   
 
 	// Use this for initialization
-	void Start () {
+	void Start (){
+        spawnColl = GameObject.Find("Raumbegrenzer").GetComponent<BoxCollider>();
         healthCurr = healthMax;
         player = GameObject.FindGameObjectWithTag("Player");
         agent = this.GetComponent<NavMeshAgent>();
@@ -238,7 +239,7 @@ public class Enemy : MonoBehaviour {
     IEnumerator SpawnDamagePlane()
     {
         Debug.Log("SpawnDamagePlaneFunc");
-        Vector3 spawnpoint = new Vector3(spawnColl.bounds.center.x + Random.Range(-0.5f*spawnColl.bounds.size.x,0.5f* spawnColl.bounds.size.x), 0, spawnColl.bounds.center.z + Random.Range(-0.5f*spawnColl.bounds.size.z,0.5f* spawnColl.bounds.size.z));
+        Vector3 spawnpoint = new Vector3(spawnColl.bounds.center.x + Random.Range(-0.5f*spawnColl.bounds.size.x,0.5f* spawnColl.bounds.size.x), 1, spawnColl.bounds.center.z + Random.Range(-0.5f*spawnColl.bounds.size.z,0.5f* spawnColl.bounds.size.z));
         Instantiate(DamagePlane, spawnpoint, Quaternion.identity);
         yield return new WaitForSeconds(0.5f);
          isAttacking = false;
@@ -246,7 +247,7 @@ public class Enemy : MonoBehaviour {
 
     IEnumerator SpawnMinion()
     {
-        Vector3 spawnpoint = new Vector3(spawnColl.bounds.center.x + Random.Range(-0.5f * spawnColl.bounds.size.x, 0.5f * spawnColl.bounds.size.x), 0.5f, spawnColl.bounds.center.z + Random.Range(-0.5f * spawnColl.bounds.size.z, 0.5f * spawnColl.bounds.size.z));
+        Vector3 spawnpoint = new Vector3(spawnColl.bounds.center.x + Random.Range(-0.5f * spawnColl.bounds.size.x, 0.5f * spawnColl.bounds.size.x), 1f, spawnColl.bounds.center.z + Random.Range(-0.5f * spawnColl.bounds.size.z, 0.5f * spawnColl.bounds.size.z));
         Instantiate(Minion, spawnpoint, Quaternion.identity);
         yield return new WaitForSeconds(0.5f);
          isAttacking = false;
@@ -255,7 +256,7 @@ public class Enemy : MonoBehaviour {
 
    IEnumerator  Teleport()
     {
-        Vector3 teleportPoint = new Vector3(spawnColl.bounds.center.x + Random.Range(-0.4f * spawnColl.bounds.size.x, 0.4f * spawnColl.bounds.size.x), 0.5f, spawnColl.bounds.center.z + Random.Range(-0.4f * spawnColl.bounds.size.z, 0.4f * spawnColl.bounds.size.z));
+        Vector3 teleportPoint = new Vector3(spawnColl.bounds.center.x + Random.Range(-0.4f * spawnColl.bounds.size.x, 0.4f * spawnColl.bounds.size.x), 1f, spawnColl.bounds.center.z + Random.Range(-0.4f * spawnColl.bounds.size.z, 0.4f * spawnColl.bounds.size.z));
         this.transform.position = new Vector3(1000, 1, 1000);
        GameObject m= Instantiate(teleportMarker,teleportPoint,Quaternion.identity);
         yield return new WaitForSeconds(timeBetweenTeleport);
