@@ -65,7 +65,7 @@ public class PlayerManager : MonoBehaviour{
 	        displayCardScriptShopCards[i] = shopCards[i].GetComponent<DisplayCard>();
 	        draggableShopCards[i] = shopCards[i].GetComponent<Draggable>();
         }
-		playShopFadeIn();
+		battleWon();
     }
 	
 	// Update is called once per frame
@@ -142,7 +142,7 @@ public class PlayerManager : MonoBehaviour{
 
 	//called from enemey, when its health is = 0
 	public void battleWon(){
-		
+		victorySound.Play();
 		playShopFadeIn();
 	} 
 	
@@ -151,6 +151,9 @@ public class PlayerManager : MonoBehaviour{
 	//						   		CardShop
 	//---------------------------------------------------------------------	
 
+	[SerializeField]
+	private AudioSource victorySound;
+	
 	[SerializeField]
 	private GameObject[] shopCards;
 	
