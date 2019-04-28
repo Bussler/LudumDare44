@@ -27,6 +27,8 @@ public class PlayerManager : MonoBehaviour{
 	private BaseEffect[] playerAbilities;
 	
 	private bool playEffect = false;
+
+	[SerializeField] private Material[] groundMaterials;
 	
 	[SerializeField] 
 	private GameObject sprites, sprites2, DmgAoe, HealAoe, FireBall, ShieldAoe, StandardFireBall;
@@ -239,15 +241,21 @@ public class PlayerManager : MonoBehaviour{
 		fadeOutAnimator.SetTrigger("PlayFadeOut");
 		resetPlayer();
 		//chooseNewBoss
-		//resetLevel
-	//	fadeOutAnimator.SetTrigger("PlayFadeIn");
+		
+		
+		
+		fadeOutAnimator.SetTrigger("PlayFadeIn");
 		playerMovementScript.enabled = true;
 	}
+	
 
 	private void resetPlayer(){
 		playerCurrentHealth = playerHealth;
 		transform.position = new Vector3(0, 1, 0);
 		playerMovementScript.reset();
+		for(int i = 0; i < myCanvas.transform.childCount; i++){
+			Destroy(myCanvas.transform.GetChild(0));
+		}
 	}
 	
 	
