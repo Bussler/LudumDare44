@@ -86,7 +86,7 @@ Transform:
   m_GameObject: {fileID: 1621655597259370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.450286, y: 1, z: -0.39210987}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4784270747052172}
   - {fileID: 4127789055403042}
@@ -181,7 +181,7 @@ MonoBehaviour:
   canTeleport: 0
   healthMax: 100
   damage: 5
-  speed: 3
+  speed: 43.31
   timeBetweenAttacks: 2
   attacks: []
   time: 0
