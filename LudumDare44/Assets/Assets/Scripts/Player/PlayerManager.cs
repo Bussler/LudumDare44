@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Experimental.PlayerLoop;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using Random = System.Random;
 
 public class PlayerManager : MonoBehaviour{
@@ -159,7 +160,7 @@ public class PlayerManager : MonoBehaviour{
 
 	public void Die()
 	{
-		//TODO GameOver
+        SceneManager.LoadScene("Death");
 	}
 
 	//called from enemey, when its health is = 0
