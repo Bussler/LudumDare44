@@ -21,8 +21,8 @@ public class PlayerManager : MonoBehaviour{
 	
 	[SerializeField] 
 	private Camera mainCamera;
-	
-	private bool canUseAbilities, timeIsFreezed;
+
+	private bool canUseAbilities, timeIsFreezed, notInShop = true, wasInShop = false;
 	
 	
 	private BaseEffect[] playerAbilities;
@@ -35,7 +35,7 @@ public class PlayerManager : MonoBehaviour{
 	private GameObject sprites, sprites2, DmgAoe, HealAoe, FireBall, ShieldAoe, StandardFireBall;
 
     [SerializeField]
-    private GameObject myCanvas;
+    private GameObject myCanvas, Plane;
 
     [SerializeField] 
     private DeckManager deckManager;
@@ -111,7 +111,14 @@ public class PlayerManager : MonoBehaviour{
 
 
 	private void FixedUpdate(){
-		if (effectTimer < LimitGougeTimer)
+		if (notInShop && wasInShop && fadeOutAnimator.GetCurrentAnimatorStateInfo(0).IsName("WaitingState")){
+			wasInShop = false;
+			currentBossPrefab = Instantiate(enemies[currentBoss], new Vector3(0, 1, 0), enemies[currentBoss].transform.rotation);
+			playerMovementScript.enabled = true;
+			effectTimer = 0;
+			limitBar.sizeDelta = new Vector2(effectTimer, healthBar.sizeDelta.y);
+		}
+		if (!wasInShop && notInShop && effectTimer < LimitGougeTimer)
         {
 			effectTimer++;
             limitBar.sizeDelta = new Vector2(effectTimer, healthBar.sizeDelta.y);
@@ -158,6 +165,7 @@ public class PlayerManager : MonoBehaviour{
 	//called from enemey, when its health is = 0
 	public void battleWon(){
 		victorySound.Play();
+		Destroy(currentBossPrefab);
 		playShopFadeIn();
 	} 
 	
@@ -185,6 +193,9 @@ public class PlayerManager : MonoBehaviour{
 	
 	//fades th whole sop in
 	private void playShopFadeIn(){
+		playerMovementScript.stop();
+		wasInShop = true;
+		notInShop = false;
 		playerMovementScript.enabled = false;
 		Card[] chosenPoolCards = deckManager.get3RandomShopCards();
 		for (int i = 0; i < 3; i++){
@@ -250,16 +261,20 @@ public class PlayerManager : MonoBehaviour{
 	
 	private void resetLevel(){
 		fadeOutAnimator.SetTrigger("PlayFadeOut");
-		resetPlayer();
-		chooseNewBoss();
+		
 		int newGroundMaterial = UnityEngine.Random.Range(0, groundMaterials.Length);
 		Destroy(currentBossPrefab);
 		while(newGroundMaterial == groundMaterialIndex)
 			newGroundMaterial = UnityEngine.Random.Range(0, groundMaterials.Length);
 		groundMaterialIndex = newGroundMaterial;
+		Plane.GetComponent<MeshRenderer>().material= groundMaterials[groundMaterialIndex];
+		resetPlayer();
+		chooseNewBoss();
+		
 		fadeOutAnimator.SetTrigger("PlayFadeIn");
-		currentBossPrefab = Instantiate(enemies[currentBoss], new Vector3(0, 1, 0), enemies[currentBoss].transform.rotation);
-		playerMovementScript.enabled = true;
+		notInShop = true;
+		
+		
 	}
 	
 
@@ -270,6 +285,8 @@ public class PlayerManager : MonoBehaviour{
 		for(int i = 0; i < myCanvas.transform.childCount; i++){
 			Destroy(myCanvas.transform.GetChild(0));
 		}
+	
+		
 	}
 
 	private void chooseNewBoss(){

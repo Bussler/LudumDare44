@@ -107,4 +107,8 @@ public class Movement : MonoBehaviour
 		canDodgeTimer = 100;
 		canDodge = true;
 	}
+
+	public void stop(){
+		rigidbody.velocity = Vector3.zero;
+	}
 }
