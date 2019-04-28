@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealEffect : BaseEffect {
 
-    private int HealAmount = 10;
+    private int HealAmount = 40;
 
     public HealEffect(int amt)
     {

@@ -36,12 +36,18 @@ public class PlayerManager : MonoBehaviour{
 
     [SerializeField] 
     private DeckManager deckManager;
+
+    [SerializeField]
+    private RectTransform healthBar;
 	
 
 	// Use this for initialization
 	void Start () {
 		
 		playerCurrentHealth = playerHealth;
+
+        TakeDamage(30);
+
 		
 		playerAbilities = new BaseEffect[8];
 		
@@ -65,7 +71,7 @@ public class PlayerManager : MonoBehaviour{
 	        displayCardScriptShopCards[i] = shopCards[i].GetComponent<DisplayCard>();
 	        draggableShopCards[i] = shopCards[i].GetComponent<Draggable>();
         }
-		battleWon();
+		//battleWon();
     }
 	
 	// Update is called once per frame
@@ -74,7 +80,7 @@ public class PlayerManager : MonoBehaviour{
 		if (playerCurrentHealth <= 0){
 			Die();
 		}
-		Debug.Log("Playerhealth: " + playerCurrentHealth);
+		//Debug.Log("Playerhealth: " + playerCurrentHealth);
 	}
 
     public void DisplayEffect(int i)
@@ -126,14 +132,15 @@ public class PlayerManager : MonoBehaviour{
 	public void TakeDamage(int amount)
 	{
 		playerCurrentHealth -= amount;
+        healthBar.sizeDelta=new Vector2(playerCurrentHealth, healthBar.sizeDelta.y);
 	}
 
 	public void increaseHealth(int amount){
 		playerCurrentHealth += amount;
 		if (playerCurrentHealth > playerHealth)
 			playerCurrentHealth = playerHealth;
-
-	}
+        healthBar.sizeDelta = new Vector2(playerCurrentHealth, healthBar.sizeDelta.y);
+    }
 
 	public void Die()
 	{

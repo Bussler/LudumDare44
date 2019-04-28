@@ -109,6 +109,8 @@ MonoBehaviour:
   StandardFireBall: {fileID: 1837616085092150, guid: b468d95e566370e498415e064d17dafc,
     type: 2}
   myCanvas: {fileID: 0}
+  deckManager: {fileID: 0}
+  victorySound: {fileID: 0}
   shopCards:
   - {fileID: 0}
   - {fileID: 0}

@@ -1408,6 +1408,76 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &944742216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 944742217}
+  - component: {fileID: 944742219}
+  - component: {fileID: 944742218}
+  m_Layer: 5
+  m_Name: HealthBackround
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &944742217
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 944742216}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1402430971}
+  m_Father: {fileID: 1101322911}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 686.5, y: 413.52}
+  m_SizeDelta: {x: 200, y: 10}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &944742218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 944742216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.745283, g: 0.20741367, b: 0.20741367, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &944742219
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 944742216}
+  m_CullTransparentMesh: 0
 --- !u!1 &1030139797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1582,6 +1652,7 @@ RectTransform:
   - {fileID: 412597250}
   - {fileID: 60307260}
   - {fileID: 187413543}
+  - {fileID: 944742217}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1989,6 +2060,75 @@ MonoBehaviour:
   currentDropzone: {fileID: 0}
   originalParent: {fileID: 0}
   myType: 0
+--- !u!1 &1402430970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1402430971}
+  - component: {fileID: 1402430973}
+  - component: {fileID: 1402430972}
+  m_Layer: 5
+  m_Name: HealthForeground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1402430971
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1402430970}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 944742217}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.0014477, y: -0.000041962}
+  m_SizeDelta: {x: 200, y: 10}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1402430972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1402430970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.32079923, g: 0.8396226, b: 0.34505376, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1402430973
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1402430970}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1403716374
 Prefab:
   m_ObjectHideFlags: 0
@@ -2040,6 +2180,16 @@ Prefab:
       objectReference: {fileID: 60307259}
     - target: {fileID: 114335183645754290, guid: 8502b8a73c6053741a6ef75b044ea894,
         type: 2}
+      propertyPath: deckManager
+      value: 
+      objectReference: {fileID: 390114126}
+    - target: {fileID: 114335183645754290, guid: 8502b8a73c6053741a6ef75b044ea894,
+        type: 2}
+      propertyPath: victorySound
+      value: 
+      objectReference: {fileID: 934826269}
+    - target: {fileID: 114335183645754290, guid: 8502b8a73c6053741a6ef75b044ea894,
+        type: 2}
       propertyPath: shopCards.Array.data[0]
       value: 
       objectReference: {fileID: 1230575835}
@@ -2075,24 +2225,14 @@ Prefab:
       objectReference: {fileID: 1679741092}
     - target: {fileID: 114335183645754290, guid: 8502b8a73c6053741a6ef75b044ea894,
         type: 2}
-      propertyPath: deckManager
+      propertyPath: healthBar
       value: 
-      objectReference: {fileID: 390114126}
+      objectReference: {fileID: 1402430971}
     - target: {fileID: 114335183645754290, guid: 8502b8a73c6053741a6ef75b044ea894,
         type: 2}
-      propertyPath: LimitGougeTimer
-      value: 1000
+      propertyPath: playerHealth
+      value: 200
       objectReference: {fileID: 0}
-    - target: {fileID: 114335183645754290, guid: 8502b8a73c6053741a6ef75b044ea894,
-        type: 2}
-      propertyPath: viktorySound
-      value: 
-      objectReference: {fileID: 934826269}
-    - target: {fileID: 114335183645754290, guid: 8502b8a73c6053741a6ef75b044ea894,
-        type: 2}
-      propertyPath: victorySound
-      value: 
-      objectReference: {fileID: 934826269}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8502b8a73c6053741a6ef75b044ea894, type: 2}
   m_IsPrefabAsset: 0

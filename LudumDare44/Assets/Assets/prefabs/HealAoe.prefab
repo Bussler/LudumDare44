@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 5
-  dmg: 1
+  dmg: 20
   doesDmg: 0
   timeInterval: 0.5
 --- !u!135 &135210055001597878
