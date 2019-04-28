@@ -40,7 +40,7 @@ public class Movement : MonoBehaviour
 				canDodge = true;		//activate dodge ability
 			}
 
-			int directionValue = 1, verticalDirection = 0;
+			int directionValue = 0, verticalDirection = 0;
 			
 			bool vertical = false;
 			//WASD movement
@@ -58,17 +58,21 @@ public class Movement : MonoBehaviour
 
 			if (Input.GetKey(KeyCode.W)){
 				rigidbody.velocity += (Vector3.forward * movementSpeed);
-				directionValue = 0;
-				vertical = true;
-				verticalDirection = 1;
+				if (directionValue == 0){
+					directionValue = 0;
+					vertical = true;
+					verticalDirection = 1;
+				}
 			}
 
 			if (Input.GetKey(KeyCode.S)){
 				rigidbody.velocity += (Vector3.back * movementSpeed);
 				//directionValue = -1;
-				directionValue = 0;
-				vertical = true;
-				verticalDirection = -1;
+				if (directionValue == 0){
+					directionValue = 0;
+					vertical = true;
+					verticalDirection = -1;
+				}
 			}
 			Debug.Log("rgid" + rigidbody.velocity.magnitude * directionValue);
 			if (!vertical){

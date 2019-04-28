@@ -16,4 +16,4 @@ MonoBehaviour:
   myType: 1
   effectID: 6
   attack: 100
-  imageName: fire
+  imageName: "meteorenfeuerb\xE4lle"
