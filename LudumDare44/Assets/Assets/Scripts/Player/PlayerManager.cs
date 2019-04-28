@@ -11,7 +11,9 @@ public class PlayerManager : MonoBehaviour{
 	[SerializeField]
 	private int playerHealth, playerDamage;
 	private int playerCurrentHealth;
-	[SerializeField]
+    [SerializeField]
+    private float LimitGougeTimer;
+
 	private float effectTimer;
 
 	[SerializeField] 
@@ -89,13 +91,15 @@ public class PlayerManager : MonoBehaviour{
         }
     }
 
+
 	private void FixedUpdate(){
-		if (effectTimer < 100){
+		if (effectTimer < LimitGougeTimer)
+        {
 			effectTimer++;
         }
         else
         {
-            if (effectTimer>=100 && !timeIsFreezed)
+            if (effectTimer>= LimitGougeTimer && !timeIsFreezed)
             {
                 timeIsFreezed = true; //TODO actually freeze time
                 Time.timeScale = 0;

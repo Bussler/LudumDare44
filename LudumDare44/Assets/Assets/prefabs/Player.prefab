@@ -83,8 +83,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb7750f09d19e37479349a81640ed4de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 30
-  dodgeRollSpeed: 10
+  movementSpeed: 93.7
+  dodgeRollSpeed: 8.7
 --- !u!114 &114335183645754290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: 10
   playerDamage: 1
-  effectTimer: 0
+  LimitGougeTimer: 300
   mainCamera: {fileID: 0}
   sprites: {fileID: 1854933645464292, guid: 8c6043145a03bab499aa023f7f7119e2, type: 2}
   sprites2: {fileID: 1854933645464292, guid: 630da0ad2737bf944b6f72eb65332a6f, type: 2}
