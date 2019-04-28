@@ -62,6 +62,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 507023afadcfdf647b820dd3897ab989, type: 2}
   - {fileID: 11400000, guid: 507023afadcfdf647b820dd3897ab989, type: 2}
   - {fileID: 11400000, guid: 507023afadcfdf647b820dd3897ab989, type: 2}
+  CardPool:
+  - {fileID: 11400000, guid: 507023afadcfdf647b820dd3897ab989, type: 2}
+  - {fileID: 11400000, guid: 05c508ff09924024c88381ef04223720, type: 2}
+  - {fileID: 11400000, guid: 4666306cc14a8574dae32763838fd956, type: 2}
+  - {fileID: 11400000, guid: e4e93b4c2c228a84080de31790df1849, type: 2}
+  - {fileID: 11400000, guid: dcf080f2021194d41a4c2577919dbfec, type: 2}
+  - {fileID: 11400000, guid: bb62ea08b86a9c842808751c6098e9f1, type: 2}
+  - {fileID: 11400000, guid: 5d0df670727c66e4f93107b6b25bfc44, type: 2}
+  - {fileID: 11400000, guid: 332c21f5fafff6645abf2c65cafdc34e, type: 2}
   playerHand: {fileID: 0}
   cardPrefab: {fileID: 1858156439483192, guid: 032662415cb09864ab7d02f571215076, type: 2}
   handSize: 4
