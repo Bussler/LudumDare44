@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class ApplyDmgOverTime : MonoBehaviour {
 
-    public int time = 5;//time to live
+    public float time = 5;//time to live
     public int dmg = 1; //dmg to apply each second
 
     public bool doesDmg = true;
 
     private float elapsedTime=0f;
 
-    public float timeInterval = 1;
+    public float timeInterval = 0.5f;
 
     private float ElapsedInterval;
 
@@ -27,10 +27,10 @@ public class ApplyDmgOverTime : MonoBehaviour {
 
     private void OnTriggerStay(Collider collision)
     {
+
         ElapsedInterval += Time.deltaTime;
         if (ElapsedInterval >= timeInterval)
         {
-            Debug.Log("Yeet");
 
             if (!doesDmg && collision.gameObject.name=="Player")
             {
@@ -51,6 +51,7 @@ public class ApplyDmgOverTime : MonoBehaviour {
             }
 
             ElapsedInterval = 0f;
+
         }
     }
 

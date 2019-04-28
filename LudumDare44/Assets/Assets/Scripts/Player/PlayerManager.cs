@@ -25,7 +25,7 @@ public class PlayerManager : MonoBehaviour{
 	private bool playEffect = false;
 	
 	[SerializeField] 
-	private GameObject sprites, sprites2, DmgAoe, HealAoe, FireBall;
+	private GameObject sprites, sprites2, DmgAoe, HealAoe, FireBall, ShieldAoe;
 
     [SerializeField]
     private Canvas myCanvas;
@@ -37,7 +37,7 @@ public class PlayerManager : MonoBehaviour{
 	
 		playerCurrentHealth = playerHealth;
 		
-		playerAbilities = new BaseEffect[5];
+		playerAbilities = new BaseEffect[8];
 		
 		cards = new Animator[3];
 		
@@ -46,7 +46,11 @@ public class PlayerManager : MonoBehaviour{
         playerAbilities[1] = new HealEffect(10);
         playerAbilities[2] = new AOEDamage(DmgAoe, mainCamera);
         playerAbilities[3] = new AOEDamage(HealAoe, mainCamera);
-        playerAbilities[4] = new FireBallSpawn(FireBall,mainCamera, this.transform);
+        playerAbilities[4] = new FireBallSpawn(FireBall, mainCamera, this.transform, 1);
+        playerAbilities[5] = new FireBallSpawn(FireBall, mainCamera, this.transform, 2);
+        playerAbilities[6] = new FireBallSpawn(FireBall, mainCamera, this.transform, 3);
+        playerAbilities[7] = new AOEDamage(ShieldAoe, mainCamera);
+
 
         for (int i = 0; i < 3; i++){
 	        cards[i] = shopCards[i].GetComponent<Animator>();

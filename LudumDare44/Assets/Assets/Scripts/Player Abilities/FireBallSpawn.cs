@@ -7,12 +7,14 @@ public class FireBallSpawn : BaseEffect
     GameObject FireBall;
     Transform playerPos;
     Transform enemyPos;
+    int amtOfBalls;
 
-    public FireBallSpawn(GameObject sprite, Camera camera, Transform player)
+    public FireBallSpawn(GameObject sprite, Camera camera, Transform player, int amt)
     {
         FireBall = sprite;
         mainCamera = camera;
         playerPos = player;
+        amtOfBalls = amt;
     }
 
     public override void displayEffect()
@@ -25,12 +27,14 @@ public class FireBallSpawn : BaseEffect
         //Instantiate
         Vector2 m = Input.mousePosition;
         mousePosition = mainCamera.ScreenToWorldPoint(new Vector3(m.x, m.y, 10));
-        GameObject myBall = GameObject.Instantiate(FireBall, playerPos.position, Quaternion.identity);
-        myBall.GetComponent<FireBallMovement>().UpdateValues(mousePosition);
 
+        /*GameObject myBall = GameObject.Instantiate(FireBall, playerPos.position, Quaternion.identity);
+        myBall.GetComponent<FireBallMovement>().UpdateValues(mousePosition);*/
+        GameObject.FindObjectOfType<CreateMultipleFireBalls>().UpdateValues(mousePosition, playerPos, amtOfBalls);
     }
 
     public override void start()
     {
+
     }
 }
