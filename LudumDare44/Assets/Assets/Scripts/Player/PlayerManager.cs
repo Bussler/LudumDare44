@@ -228,11 +228,19 @@ public class PlayerManager : MonoBehaviour{
 
 	private void resetLevel(){
 		fadeOutAnimator.SetTrigger("PlayFadeOut");
-		//resetPlayer
+		resetPlayer();
 		//chooseNewBoss
 		//resetLevel
 	//	fadeOutAnimator.SetTrigger("PlayFadeIn");
 		playerMovementScript.enabled = true;
 	}
+
+	private void resetPlayer(){
+		playerCurrentHealth = playerHealth;
+		transform.position = new Vector3(0, 1, 0);
+		playerMovementScript.reset();
+	}
+	
+	
 	
 }

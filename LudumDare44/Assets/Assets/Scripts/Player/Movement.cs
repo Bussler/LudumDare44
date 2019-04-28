@@ -72,4 +72,9 @@ public class Movement : MonoBehaviour
 				Debug.Log("Player Dodged");
 			}
 	}
+
+	public void reset(){
+		canDodgeTimer = 100;
+		canDodge = true;
+	}
 }
