@@ -156,9 +156,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4980d5e45005ca942b89a583a1e84bb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  growTime: 1
-  lifeTime: 4
+  growTime: 0.5
+  lifeTime: 8
   damage: 0
+  growthFactor: 10
 --- !u!114 &114833843881378910
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -217,7 +218,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300006, guid: 318cbc45cc7effb4bacc019e04942244, type: 3}
+  m_Sprite: {fileID: 21300006, guid: 2ddece45146c1af4184096cb141c115f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
