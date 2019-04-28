@@ -59,7 +59,6 @@ public class PlayerManager : MonoBehaviour{
 	        cards[i] = shopCards[i].GetComponent<Animator>();
         }
 
-		resetLevel();
     }
 	
 	// Update is called once per frame
