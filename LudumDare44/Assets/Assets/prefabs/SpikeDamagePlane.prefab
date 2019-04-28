@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTime: 1
   lifeTime: 4
-  damage: 0
+  damage: 20
   growthFactor: 3
 --- !u!135 &135362785713614366
 SphereCollider:
@@ -166,7 +166,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1636312608517438}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5

@@ -181,7 +181,7 @@ MonoBehaviour:
   canSpawnMinions: 0
   canTeleport: 0
   healthMax: 100
-  damage: 5
+  damage: 50
   speed: 43.31
   timeBetweenAttacks: 2
   attacks: []

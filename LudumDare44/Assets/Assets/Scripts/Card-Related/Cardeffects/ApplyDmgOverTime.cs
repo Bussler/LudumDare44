@@ -38,16 +38,13 @@ public class ApplyDmgOverTime : MonoBehaviour {
                 if (plM != null)
                 {
                     plM.increaseHealth(dmg);
-                    Debug.Log("Player healed");
                 }
             }
             if (doesDmg && collision.gameObject.tag == "Enemy")
             {
-                Debug.Log("detected enemy");
                     Enemy enemy = collision.gameObject.GetComponent<Enemy>();
                     if (enemy != null)
                     {
-                        Debug.Log("Success aoe damage!");
                         enemy.TakeDmage(dmg);
                     }
                 

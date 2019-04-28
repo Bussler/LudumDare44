@@ -876,7 +876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   growTime: 1
-  damage: 0
+  damage: 20
   growthFactor: 10
 --- !u!212 &212108411180063420
 SpriteRenderer:
