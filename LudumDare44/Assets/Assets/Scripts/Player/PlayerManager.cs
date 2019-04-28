@@ -28,7 +28,8 @@ public class PlayerManager : MonoBehaviour{
 	private GameObject sprites, sprites2, DmgAoe, HealAoe, FireBall, ShieldAoe;
 
     [SerializeField]
-    private Canvas myCanvas;
+    private GameObject myCanvas;
+    
 	
 	
 
@@ -89,12 +90,12 @@ public class PlayerManager : MonoBehaviour{
     }
 
 	private void FixedUpdate(){
-		if (effectTimer < 100){
+		if (effectTimer < 1000){
 			effectTimer++;
         }
         else
         {
-            if (effectTimer>=100 && !timeIsFreezed)
+            if (effectTimer>=1000 && !timeIsFreezed)
             {
                 timeIsFreezed = true; //TODO actually freeze time
                 Time.timeScale = 0;

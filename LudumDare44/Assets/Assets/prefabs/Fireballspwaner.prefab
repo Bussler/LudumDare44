@@ -52,4 +52,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FireBall: {fileID: 1968971035741248, guid: eea47941129de26499e1d5316a682662, type: 2}
-  shoot: 0
