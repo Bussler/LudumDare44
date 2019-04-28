@@ -72,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1594025263793516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0.43189025, y: 1, z: 0.28067875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4473035352914112}
@@ -185,19 +185,19 @@ MonoBehaviour:
   timeBetweenAttacks: 1
   attacks: []
   time: 0
-  SingleProjectile: {fileID: 1282941445497536, guid: aeab33215a704e24ca3a6824d7dd282c,
+  SingleProjectile: {fileID: 1805335743015158, guid: b8a85de614af29e40a5c702738cb9533,
     type: 2}
-  PatternProjectile: {fileID: 1282941445497536, guid: aeab33215a704e24ca3a6824d7dd282c,
+  PatternProjectile: {fileID: 1805335743015158, guid: b8a85de614af29e40a5c702738cb9533,
     type: 2}
   patterns:
   - {fileID: 114749177373864034, guid: 6f2dab6e7f459b74ea4826621746fad7, type: 2}
   - {fileID: 114373358520332186, guid: c4d2c851fbf388a48b744037b620637e, type: 2}
   patternsPerAttack: 2
   timeBetweenPatterns: 1
-  Obstacle: {fileID: 1715070819342494, guid: b9cc0d8094e0e4f4992c042c5c59b723, type: 2}
+  Obstacle: {fileID: 1257423075542858, guid: 06791162e84b9d443bcd7a10c05193bf, type: 2}
   obstacleActiveTime: 3
   growTime: 0.5
-  DamagePlane: {fileID: 1866181348218324, guid: efc0738b25e1cdd46b2160a61d2a1c82,
+  DamagePlane: {fileID: 1490246672570206, guid: afe7e3fa9922f944fb8e97ab66ea0ce0,
     type: 2}
   spawnColl: {fileID: 0}
   Minion: {fileID: 0}

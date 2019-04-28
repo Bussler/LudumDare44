@@ -106,16 +106,16 @@ public class Enemy : MonoBehaviour {
             Die();
         }
 
-        if (canFollowPlayer && !isAttacking) 
+        if (canFollowPlayer && !isCharging) 
         {
            
             agent.destination = player.transform.position;
         }
 
-        if (!isAttacking)
-        {
+      ///  if (!isAttacking)
+      // {
             time = time + Time.deltaTime;
-        }
+      // }
         if(time >= timeBetweenAttacks)
         {
             Debug.Log("Attack");
@@ -219,11 +219,11 @@ public class Enemy : MonoBehaviour {
     {
         Debug.Log("SpawnObstacleFunc");
         GameObject o = Instantiate(Obstacle, this.transform.position, Quaternion.identity);
-        for (int i =0; i < 100; i++)
+        for (int i =0; i < 1000; i++)
         {
-            Vector3 newScale = new Vector3(o.transform.localScale.x+0.01f, o.transform.localScale.y+0.01f, o.transform.localScale.z+ 0.01f);
+            Vector3 newScale = new Vector3(o.transform.localScale.x+0.001f, o.transform.localScale.y+0.001f, o.transform.localScale.z+ 0.001f);
             o.transform.localScale = newScale;
-            yield return new WaitForSeconds(growTime / 100);
+            yield return new WaitForSeconds(growTime / 1000);
                  
         }
 
