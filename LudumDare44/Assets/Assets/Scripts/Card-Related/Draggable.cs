@@ -28,7 +28,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public void OnBeginDrag(PointerEventData eventData)//the hand is a panel with a horizontal layout so that it orders the cards as children nicely. when we drag the card, we have to undo the child parent behaviour between card and hand
     {
         //create a placeholder so that the cards won't automaticly shift when the card is dragged out
-        placeholder = new GameObject();
+        /*placeholder = new GameObject();
         placeholder.transform.SetParent(this.transform.parent);
         LayoutElement le = placeholder.AddComponent<LayoutElement>();
         le.preferredWidth = this.GetComponent<LayoutElement>().preferredWidth;
@@ -36,7 +36,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         le.flexibleHeight = 0;
         le.flexibleWidth = 0;
 
-        placeholder.transform.SetSiblingIndex(this.transform.GetSiblingIndex());
+        placeholder.transform.SetSiblingIndex(this.transform.GetSiblingIndex());*/
 
         //grab the point to return to if invalid drop and delete the gameobject of the current hand layout
         lastParent = this.transform.parent;
@@ -58,7 +58,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
         //move cards when hovering over them with a card
 
-        placeholder.transform.SetParent(currentDropzone);//the placeholder gameobject has to be a child of the current hovering dropzone
+        /*placeholder.transform.SetParent(currentDropzone);//the placeholder gameobject has to be a child of the current hovering dropzone
         int newSiblingIndex = currentDropzone.childCount;//default: last index
 
         for (int i=0;i<currentDropzone.childCount; i++)//check for each children in currently hovering dropzone
@@ -75,7 +75,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             }
 
         }
-        placeholder.transform.SetSiblingIndex(newSiblingIndex);
+        placeholder.transform.SetSiblingIndex(newSiblingIndex);*/
 
     }
 
@@ -83,11 +83,11 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public void OnEndDrag(PointerEventData eventData)
     {
         this.transform.SetParent(lastParent);
-        this.transform.SetSiblingIndex(placeholder.transform.GetSiblingIndex());
+        //this.transform.SetSiblingIndex(placeholder.transform.GetSiblingIndex());
 
         gameObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
 
-        Destroy(placeholder);
+       // Destroy(placeholder);
 
         //activate, destroy Effect Card
         if (lastParent!=originalParent)

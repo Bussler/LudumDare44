@@ -28,6 +28,7 @@
               <e p="EnviormentalHazard.cs" t="Include" />
               <e p="Obstacle.cs" t="Include" />
               <e p="Pattern.cs" t="Include" />
+              <e p="SpaceTear.cs" t="Include" />
               <e p="TeleportObstacle.cs" t="Include" />
             </e>
             <e p="Player" t="Include">

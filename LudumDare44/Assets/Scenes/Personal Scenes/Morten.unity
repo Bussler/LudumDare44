@@ -2003,7 +2003,7 @@ Prefab:
         type: 2}
       propertyPath: playerHand
       value: 
-      objectReference: {fileID: 382413975}
+      objectReference: {fileID: 382413976}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d0accab54f84246ac4ad679ead59f4, type: 2}
   m_IsPrefabAsset: 0

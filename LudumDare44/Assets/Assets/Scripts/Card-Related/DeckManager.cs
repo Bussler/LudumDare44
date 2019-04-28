@@ -10,7 +10,7 @@ public class DeckManager : MonoBehaviour {
 
     public static List<Card> Graveyard=new List<Card>();
 
-    public GameObject playerHand;
+    public Transform playerHand;
 
     public GameObject cardPrefab;
 
@@ -81,12 +81,13 @@ public class DeckManager : MonoBehaviour {
     {
         GameObject card = Instantiate(cardPrefab) as GameObject;
 
-        card.transform.SetParent(playerHand.transform);
+        card.transform.SetParent(playerHand);
 
         card.GetComponent<DisplayCard>().card = c;
         card.GetComponent<DisplayCard>().applyInfo();
         
         card.transform.localScale = new Vector3(1, 1, 1);
+
     }
 
 }
