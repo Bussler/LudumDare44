@@ -40,25 +40,48 @@ public class Movement : MonoBehaviour
 				canDodge = true;		//activate dodge ability
 			}
 
+			int directionValue = 1, verticalDirection = 0;
+			
+			bool vertical = false;
 			//WASD movement
 			if (Input.GetKey(KeyCode.A)){
 				rigidbody.velocity += (Vector3.left * movementSpeed);
+				directionValue = -1;
+				vertical = false;
 			}
 
 			if (Input.GetKey(KeyCode.D)){
 				rigidbody.velocity += (Vector3.right * movementSpeed);
+				directionValue = 1;
+				vertical = false;
 			}
 
 			if (Input.GetKey(KeyCode.W)){
 				rigidbody.velocity += (Vector3.forward * movementSpeed);
+				directionValue = 0;
+				vertical = true;
+				verticalDirection = 1;
 			}
 
 			if (Input.GetKey(KeyCode.S)){
 				rigidbody.velocity += (Vector3.back * movementSpeed);
+				//directionValue = -1;
+				directionValue = 0;
+				vertical = true;
+				verticalDirection = -1;
 			}
-		
-			playerAnimator.SetFloat("velocity", rigidbody.velocity.magnitude);
-			
+			Debug.Log("rgid" + rigidbody.velocity.magnitude * directionValue);
+			if (!vertical){
+				playerAnimator.SetFloat("velocity", rigidbody.velocity.magnitude * directionValue);
+				playerAnimator.SetFloat("velocityV", 0);
+				playerAnimator.SetInteger("Vertical", verticalDirection);
+			}
+			else{
+				playerAnimator.SetFloat("velocity", 0);
+				playerAnimator.SetInteger("Vertical", verticalDirection);
+				playerAnimator.SetFloat("velocityV", rigidbody.velocity.magnitude*directionValue);
+			}
+				
 			if (rigidbody.velocity != Vector3.zero)
 				previousWalkDirection = rigidbody.velocity;
 			
