@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19e26bd5-3c07-480d-a78e-ba9e6a800e75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare44/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare44/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Card-Related/DisplayCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Card-Related/DisplayCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Cards/StandardFireBall.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Cards/StandardFireBall.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Cards/TestCard1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Cards/TestCard1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Cards/TestCard3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Cards/TestCard3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Cards/TestCard4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Cards/TestCard4.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Cards/TestCard5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Cards/TestCard5.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Cards/TestCard6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Cards/TestCard6.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Cards/TestCard7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Cards/TestCard7.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Player/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Player/PlayerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-    </list>
+    <list default="true" id="19e26bd5-3c07-480d-a78e-ba9e6a800e75" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player/PlayerManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="267" column="44" selection-start-line="267" selection-start-column="44" selection-end-line="267" selection-end-column="44" />
+            <state relative-caret-position="559">
+              <caret line="271" column="9" lean-forward="true" selection-start-line="271" selection-start-column="9" selection-end-line="271" selection-end-column="9" />
               <folding>
                 <marker date="1556462979200" expanded="false" signature="6:170" ph="..." />
                 <marker date="1556462979200" expanded="true" signature="244:7906" ph="{...}" />
@@ -253,12 +241,12 @@
       <workItem from="1556353824883" duration="16253000" />
       <workItem from="1556436959878" duration="44000" />
       <workItem from="1556443540987" duration="8419000" />
-      <workItem from="1556459226614" duration="3484000" />
+      <workItem from="1556459226614" duration="3698000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33323000" />
+    <option name="totallyTimeSpent" value="33537000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -536,8 +524,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player/PlayerManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="267" column="44" selection-start-line="267" selection-start-column="44" selection-end-line="267" selection-end-column="44" />
+        <state relative-caret-position="559">
+          <caret line="271" column="9" lean-forward="true" selection-start-line="271" selection-start-column="9" selection-end-line="271" selection-end-column="9" />
           <folding>
             <marker date="1556462979200" expanded="false" signature="6:170" ph="..." />
             <marker date="1556462979200" expanded="true" signature="244:7906" ph="{...}" />
