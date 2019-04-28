@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  dmg: 20
+  dmg: 30
   Target: {x: 0, y: 0, z: 0}
 --- !u!135 &135691154282684672
 SphereCollider:

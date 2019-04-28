@@ -533,7 +533,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Working Title
+  m_text: Cards of Life
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -603,8 +603,8 @@ MonoBehaviour:
     textComponent: {fileID: 448321742}
     characterCount: 13
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -661,7 +661,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cde4b91d90b4a95408b74f5598a80262, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.655
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0

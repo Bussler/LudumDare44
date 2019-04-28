@@ -844,6 +844,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114363849697892426, guid: 41d0accab54f84246ac4ad679ead59f4,
+        type: 2}
+      propertyPath: PlayerDeck.Array.size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4065776010779670, guid: 41d0accab54f84246ac4ad679ead59f4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 942.803
@@ -881,6 +886,54 @@ Prefab:
       propertyPath: playerHand
       value: 
       objectReference: {fileID: 60307260}
+    - target: {fileID: 114363849697892426, guid: 41d0accab54f84246ac4ad679ead59f4,
+        type: 2}
+      propertyPath: PlayerDeck.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: 05c508ff09924024c88381ef04223720,
+        type: 2}
+    - target: {fileID: 114363849697892426, guid: 41d0accab54f84246ac4ad679ead59f4,
+        type: 2}
+      propertyPath: PlayerDeck.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 05c508ff09924024c88381ef04223720,
+        type: 2}
+    - target: {fileID: 114363849697892426, guid: 41d0accab54f84246ac4ad679ead59f4,
+        type: 2}
+      propertyPath: PlayerDeck.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: 507023afadcfdf647b820dd3897ab989,
+        type: 2}
+    - target: {fileID: 114363849697892426, guid: 41d0accab54f84246ac4ad679ead59f4,
+        type: 2}
+      propertyPath: PlayerDeck.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 507023afadcfdf647b820dd3897ab989,
+        type: 2}
+    - target: {fileID: 114363849697892426, guid: 41d0accab54f84246ac4ad679ead59f4,
+        type: 2}
+      propertyPath: PlayerDeck.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 507023afadcfdf647b820dd3897ab989,
+        type: 2}
+    - target: {fileID: 114363849697892426, guid: 41d0accab54f84246ac4ad679ead59f4,
+        type: 2}
+      propertyPath: PlayerDeck.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 507023afadcfdf647b820dd3897ab989,
+        type: 2}
+    - target: {fileID: 114363849697892426, guid: 41d0accab54f84246ac4ad679ead59f4,
+        type: 2}
+      propertyPath: PlayerDeck.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 507023afadcfdf647b820dd3897ab989,
+        type: 2}
+    - target: {fileID: 114363849697892426, guid: 41d0accab54f84246ac4ad679ead59f4,
+        type: 2}
+      propertyPath: PlayerDeck.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: bb62ea08b86a9c842808751c6098e9f1,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d0accab54f84246ac4ad679ead59f4, type: 2}
   m_IsPrefabAsset: 0

@@ -228,7 +228,7 @@ public class PlayerManager : MonoBehaviour{
 		//attack values is the cost value for this card
 		int cardCost = int.Parse(shopCards[cardIndex].GetComponent<DisplayCard>().attack.text);
 		//can the player buy teh card?
-		if (playerCurrentHealth >= cardCost){
+		if (playerCurrentHealth > cardCost){
 			//yes -> buy card
 			cards[cardIndex].SetTrigger("PlayBuyAnimation");	//buy animation
 			playerCurrentHealth -= cardCost;						//update health

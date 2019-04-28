@@ -203,7 +203,7 @@ MonoBehaviour:
   canSpawnDamagePlane: 1
   canSpawnMinions: 0
   canTeleport: 1
-  healthMax: 200
+  healthMax: 250
   damage: 50
   speed: 43.31
   timeBetweenAttacks: 1
