@@ -169,6 +169,7 @@ public class PlayerManager : MonoBehaviour{
 
 	//called from enemey, when its health is = 0
 	public void battleWon(){
+		gameSOng.Stop();
 		victorySound.Play();
 		Destroy(currentBossPrefab);
 		playShopFadeIn();
@@ -180,7 +181,7 @@ public class PlayerManager : MonoBehaviour{
 	//---------------------------------------------------------------------	
 
 	[SerializeField]
-	private AudioSource victorySound;
+	private AudioSource victorySound, gameSOng;
 	
 	[SerializeField]
 	private GameObject[] shopCards;
@@ -281,7 +282,7 @@ public class PlayerManager : MonoBehaviour{
 		fadeOutAnimator.SetTrigger("PlayFadeIn");
 		notInShop = true;
 		
-		
+		gameSOng.Play();
 	}
 	
 
