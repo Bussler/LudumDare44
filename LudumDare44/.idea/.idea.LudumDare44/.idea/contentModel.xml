@@ -32,6 +32,7 @@
               <e p="TeleportObstacle.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
+              <e p="CameraFollow.cs" t="Include" />
               <e p="Movement.cs" t="Include" />
               <e p="PlayerManager.cs" t="Include" />
             </e>
