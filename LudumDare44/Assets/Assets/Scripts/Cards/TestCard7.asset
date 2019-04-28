@@ -15,5 +15,5 @@ MonoBehaviour:
   description: Creates a safe haven
   myType: 1
   effectID: 7
-  attack: 7
+  attack: 150
   imageName: shield

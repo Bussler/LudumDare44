@@ -15,5 +15,5 @@ MonoBehaviour:
   description: Cast on self to heal
   myType: 2
   effectID: 1
-  attack: 1
+  attack: 50
   imageName: heal

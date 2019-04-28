@@ -41,9 +41,10 @@ GameObject:
   - component: {fileID: 65214487346091678}
   - component: {fileID: 114022092646020816}
   - component: {fileID: 195685957743735572}
+  - component: {fileID: 114320368913791184}
   m_Layer: 0
   m_Name: Tentakle
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,7 +156,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1621655597259370}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10, y: 2, z: 10}
@@ -206,6 +207,18 @@ MonoBehaviour:
   teleportObstacle: {fileID: 1044134037121984, guid: 94b3a633d46d91e47a2fcb26fecff15a,
     type: 2}
   ChargeSpeed: 15
+--- !u!114 &114320368913791184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1621655597259370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c5027fd2ed69b04bad1b6e403f9d29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myDropType: 1
 --- !u!114 &114399801971677210
 MonoBehaviour:
   m_ObjectHideFlags: 1

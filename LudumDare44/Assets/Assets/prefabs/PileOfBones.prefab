@@ -58,9 +58,10 @@ GameObject:
   - component: {fileID: 65946215399891472}
   - component: {fileID: 114808600184063404}
   - component: {fileID: 195518868647158446}
+  - component: {fileID: 114358472512788758}
   m_Layer: 0
   m_Name: PileOfBones
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,11 +156,23 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1594025263793516}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10, y: 2, z: 9}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114358472512788758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1594025263793516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c5027fd2ed69b04bad1b6e403f9d29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myDropType: 1
 --- !u!114 &114808600184063404
 MonoBehaviour:
   m_ObjectHideFlags: 1

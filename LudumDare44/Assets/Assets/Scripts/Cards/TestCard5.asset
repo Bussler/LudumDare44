@@ -15,5 +15,5 @@ MonoBehaviour:
   description: Cast a salve of fireballs
   myType: 1
   effectID: 5
-  attack: 5
+  attack: 80
   imageName: fire

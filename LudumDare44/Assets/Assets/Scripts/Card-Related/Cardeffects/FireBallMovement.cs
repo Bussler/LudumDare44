@@ -43,7 +43,7 @@ public class FireBallMovement : MonoBehaviour {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             if (enemy != null)
             {   
-                enemy.TakeDmage(-dmg);
+                enemy.TakeDmage(dmg);
                 Destroy(gameObject);
 
             }

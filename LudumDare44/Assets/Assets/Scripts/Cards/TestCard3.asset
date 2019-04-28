@@ -15,5 +15,5 @@ MonoBehaviour:
   description: Cast a healing Aoe
   myType: 1
   effectID: 3
-  attack: 4
+  attack: 100
   imageName: heal

@@ -57,7 +57,7 @@ public class Enemy : MonoBehaviour {
 	void Start (){
         spawnColl = GameObject.Find("Raumbegrenzer").GetComponent<BoxCollider>();
         healthCurr = healthMax;
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.Find("Player");
         agent = this.GetComponent<NavMeshAgent>();
         agent.speed = speed;
         if (canFollowPlayer)

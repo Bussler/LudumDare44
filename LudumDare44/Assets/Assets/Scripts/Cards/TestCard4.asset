@@ -15,5 +15,5 @@ MonoBehaviour:
   description: Cast a strong Fireball
   myType: 1
   effectID: 4
-  attack: 4
+  attack: 50
   imageName: fire

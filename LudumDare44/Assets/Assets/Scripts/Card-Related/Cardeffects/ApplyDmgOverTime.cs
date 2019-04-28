@@ -48,7 +48,7 @@ public class ApplyDmgOverTime : MonoBehaviour {
                     if (enemy != null)
                     {
                         Debug.Log("Success aoe damage!");
-                        enemy.TakeDmage(-dmg);
+                        enemy.TakeDmage(dmg);
                     }
                 
             }
