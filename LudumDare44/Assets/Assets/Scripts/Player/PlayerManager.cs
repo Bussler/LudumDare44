@@ -287,6 +287,8 @@ public class PlayerManager : MonoBehaviour{
             cur.transform.SetParent(cur.transform.parent.parent);
             Destroy(cur);
 		}
+
+        deckManager.resetDeck();
 		
 	}
 
