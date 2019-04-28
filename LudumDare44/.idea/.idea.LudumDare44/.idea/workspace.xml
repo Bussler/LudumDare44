@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19e26bd5-3c07-480d-a78e-ba9e6a800e75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Player/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Player/PlayerManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="19e26bd5-3c07-480d-a78e-ba9e6a800e75" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player/PlayerManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="660">
+              <caret line="99" column="30" selection-start-line="99" selection-start-column="30" selection-end-line="99" selection-end-column="30" />
               <folding>
                 <marker date="1556448551023" expanded="false" signature="6:170" ph="..." />
                 <marker date="1556448551023" expanded="true" signature="214:5085" ph="{...}" />
@@ -193,12 +191,12 @@
       <updated>1556353818077</updated>
       <workItem from="1556353824883" duration="16253000" />
       <workItem from="1556436959878" duration="44000" />
-      <workItem from="1556443540987" duration="3587000" />
+      <workItem from="1556443540987" duration="3614000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25007000" />
+    <option name="totallyTimeSpent" value="25034000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -403,8 +401,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player/PlayerManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="660">
+          <caret line="99" column="30" selection-start-line="99" selection-start-column="30" selection-end-line="99" selection-end-column="30" />
           <folding>
             <marker date="1556448551023" expanded="false" signature="6:170" ph="..." />
             <marker date="1556448551023" expanded="true" signature="214:5085" ph="{...}" />
