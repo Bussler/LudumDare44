@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1621655597259370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.76, y: 1, z: 0.4304136}
+  m_LocalPosition: {x: -4.450286, y: 1, z: -0.39210987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4784270747052172}
@@ -171,18 +171,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d8c9e1e56dbf8549bccc5dd8557c894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canFollowPlayer: 1
+  canFollowPlayer: 0
   canShootProjectile: 0
   canShootPattern: 0
-  canChargeAtPlayer: 1
-  canSpawnObstacle: 1
+  canChargeAtPlayer: 0
+  canSpawnObstacle: 0
   canSpawnDamagePlane: 1
   canSpawnMinions: 0
   canTeleport: 0
   healthMax: 100
   damage: 5
   speed: 3
-  timeBetweenAttacks: 1
+  timeBetweenAttacks: 2
   attacks: []
   time: 0
   SingleProjectile: {fileID: 1282941445497536, guid: aeab33215a704e24ca3a6824d7dd282c,
@@ -194,7 +194,7 @@ MonoBehaviour:
   - {fileID: 114373358520332186, guid: c4d2c851fbf388a48b744037b620637e, type: 2}
   patternsPerAttack: 2
   timeBetweenPatterns: 1
-  Obstacle: {fileID: 1801591926200564, guid: c7ddf46b5324acf42b63718808f6b3a4, type: 2}
+  Obstacle: {fileID: 1355075758463238, guid: c7ddf46b5324acf42b63718808f6b3a4, type: 2}
   obstacleActiveTime: 3
   growTime: 1
   DamagePlane: {fileID: 1547523387135368, guid: 676d0fd91b80d6a419dfe6be04d23834,

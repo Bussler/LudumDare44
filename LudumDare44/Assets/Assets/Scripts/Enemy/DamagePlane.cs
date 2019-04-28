@@ -25,11 +25,11 @@ public class DamagePlane : MonoBehaviour {
 
     IEnumerator Grow()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 1000; i++)
         {
-            Vector3 newScale = new Vector3(transform.localScale.x + 0.01f*growthFactor, transform.localScale.y + 0.01f*growthFactor, transform.localScale.z + 0.01f*growthFactor);
+            Vector3 newScale = new Vector3(transform.localScale.x + 0.001f*growthFactor, transform.localScale.y + 0.001f*growthFactor, transform.localScale.z + 0.001f*growthFactor);
             transform.localScale = newScale;
-            yield return new WaitForSeconds(growTime / 100);
+            yield return new WaitForSeconds(growTime / 1000);
 
         }
     }
