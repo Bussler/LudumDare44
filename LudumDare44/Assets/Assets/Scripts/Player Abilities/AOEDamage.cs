@@ -20,7 +20,7 @@ public class AOEDamage: BaseEffect {
     public override void playEffect()
     {
         Vector2 m = Input.mousePosition;
-        mousePosition = mainCamera.ScreenToWorldPoint(new Vector3(m.x, m.y, 10));
+        mousePosition = mainCamera.ScreenToWorldPoint(new Vector3(m.x, m.y, mainCamera.transform.position.y-1));
 
         GameObject aoe = GameObject.Instantiate(groundAoe, new Vector3(mousePosition.x,0.5f, mousePosition.z) , Quaternion.Euler(90,0,0));
 

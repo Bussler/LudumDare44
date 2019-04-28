@@ -56,7 +56,6 @@ public class PlayerManager : MonoBehaviour{
         for (int i = 0; i < 3; i++){
 	        cards[i] = shopCards[i].GetComponent<Animator>();
         }
-        //battleWon();
 
     }
 	
@@ -90,12 +89,12 @@ public class PlayerManager : MonoBehaviour{
     }
 
 	private void FixedUpdate(){
-		if (effectTimer < 1000){
+		if (effectTimer < 100){
 			effectTimer++;
         }
         else
         {
-            if (effectTimer>=1000 && !timeIsFreezed)
+            if (effectTimer>=100 && !timeIsFreezed)
             {
                 timeIsFreezed = true; //TODO actually freeze time
                 Time.timeScale = 0;

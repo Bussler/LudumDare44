@@ -26,7 +26,7 @@ public class FireBallSpawn : BaseEffect
     {
         //Instantiate
         Vector2 m = Input.mousePosition;
-        mousePosition = mainCamera.ScreenToWorldPoint(new Vector3(m.x, m.y, 10));
+        mousePosition = mainCamera.ScreenToWorldPoint(new Vector3(m.x, m.y, mainCamera.transform.position.y - 1));
 
         /*GameObject myBall = GameObject.Instantiate(FireBall, playerPos.position, Quaternion.identity);
         myBall.GetComponent<FireBallMovement>().UpdateValues(mousePosition);*/
