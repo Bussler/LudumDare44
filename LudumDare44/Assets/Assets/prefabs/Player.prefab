@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 212320557552024372}
   - component: {fileID: 114162778152337280}
   - component: {fileID: 54050112447435244}
-  - component: {fileID: 65056403229182202}
   - component: {fileID: 114335183645754290}
   - component: {fileID: 114790519146718070}
+  - component: {fileID: 65496851762022082}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -39,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1342376248368342}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 2.7311, y: 2.7311, z: 2.7311}
+  m_LocalPosition: {x: 0, y: 9.02, z: 0}
+  m_LocalScale: {x: 50, y: 50, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -60,7 +60,7 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!65 &65056403229182202
+--- !u!65 &65496851762022082
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,7 +70,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.2, z: 0.5}
+  m_Size: {x: 0.2, y: 0.20000005, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114162778152337280
 MonoBehaviour:
@@ -83,8 +83,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb7750f09d19e37479349a81640ed4de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 6
-  dodgeRollSpeed: 4
+  movementSpeed: 30
+  dodgeRollSpeed: 10
 --- !u!114 &114335183645754290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,8 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 448b2574f13b1554eb718ab9c13a199d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 0
-  playerDamage: 0
+  playerHealth: 10
+  playerDamage: 1
   effectTimer: 0
   mainCamera: {fileID: 0}
   sprites: {fileID: 1854933645464292, guid: 8c6043145a03bab499aa023f7f7119e2, type: 2}
@@ -106,6 +106,8 @@ MonoBehaviour:
   HealAoe: {fileID: 1343646353800858, guid: 42cab319fbf64cf4a83a2c6128f2a8dc, type: 2}
   FireBall: {fileID: 1968971035741248, guid: eea47941129de26499e1d5316a682662, type: 2}
   ShieldAoe: {fileID: 1481347247610596, guid: f44b63e51621b884489fc3899bcdd06d, type: 2}
+  StandardFireBall: {fileID: 1837616085092150, guid: b468d95e566370e498415e064d17dafc,
+    type: 2}
   myCanvas: {fileID: 0}
   shopCards:
   - {fileID: 0}

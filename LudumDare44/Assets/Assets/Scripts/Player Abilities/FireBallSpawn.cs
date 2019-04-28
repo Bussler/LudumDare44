@@ -30,7 +30,7 @@ public class FireBallSpawn : BaseEffect
 
         /*GameObject myBall = GameObject.Instantiate(FireBall, playerPos.position, Quaternion.identity);
         myBall.GetComponent<FireBallMovement>().UpdateValues(mousePosition);*/
-        GameObject.FindObjectOfType<CreateMultipleFireBalls>().UpdateValues(mousePosition, playerPos, amtOfBalls);
+        GameObject.FindObjectOfType<CreateMultipleFireBalls>().UpdateValues(FireBall, mousePosition, playerPos, amtOfBalls);
     }
 
     public override void start()

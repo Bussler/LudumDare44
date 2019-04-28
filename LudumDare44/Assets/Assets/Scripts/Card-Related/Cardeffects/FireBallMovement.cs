@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class FireBallMovement : MonoBehaviour {
 
-    public float speed = 10;
+    public float speed;
 
-    public float dmg = 5;
+    public float dmg;
 
     public Vector3 Target;
 

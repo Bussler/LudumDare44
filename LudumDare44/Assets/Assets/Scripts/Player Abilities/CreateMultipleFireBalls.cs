@@ -10,8 +10,9 @@ public class CreateMultipleFireBalls : MonoBehaviour {
 
     int amtOfBalls;
 
-    public void UpdateValues(Vector3 enemy, Transform player, int amt)
+    public void UpdateValues(GameObject fireball, Vector3 enemy, Transform player, int amt)
     {
+        FireBall = fireball;
         playerPos = player;
         enemyPos = enemy;
         amtOfBalls = amt;

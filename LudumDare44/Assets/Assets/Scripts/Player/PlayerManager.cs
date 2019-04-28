@@ -25,7 +25,7 @@ public class PlayerManager : MonoBehaviour{
 	private bool playEffect = false;
 	
 	[SerializeField] 
-	private GameObject sprites, sprites2, DmgAoe, HealAoe, FireBall, ShieldAoe;
+	private GameObject sprites, sprites2, DmgAoe, HealAoe, FireBall, ShieldAoe, StandardFireBall;
 
     [SerializeField]
     private GameObject myCanvas;
@@ -41,8 +41,8 @@ public class PlayerManager : MonoBehaviour{
 		playerAbilities = new BaseEffect[8];
 		
 		cards = new Animator[3];
-		
-		//playerAbilities[0] = new AoESampleAbility(Instantiate(sprites, transform.position, sprites.transform.rotation), mainCamera, Instantiate(sprites2, transform.position, sprites.transform.rotation));
+
+        playerAbilities[0] = new FireBallSpawn(StandardFireBall, mainCamera, this.transform, 1);
 
         playerAbilities[1] = new HealEffect(10);
         playerAbilities[2] = new AOEDamage(DmgAoe, mainCamera);
@@ -56,6 +56,7 @@ public class PlayerManager : MonoBehaviour{
         for (int i = 0; i < 3; i++){
 	        cards[i] = shopCards[i].GetComponent<Animator>();
         }
+
 
     }
 	
