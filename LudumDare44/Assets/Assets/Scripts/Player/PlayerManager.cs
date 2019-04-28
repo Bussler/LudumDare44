@@ -196,12 +196,10 @@ public class PlayerManager : MonoBehaviour{
 			cards[cardIndex].SetTrigger("PlayBuyAnimation");	//buy animation
 			playerCurrentHealth -= cardCost;						//update health
 			healthText.text = remHealth + playerCurrentHealth;		//update text
-			//TODO Add the card at the index to the deck
-			Debug.Log("bought");
+			deckManager.addCardToDeck(displayCardScriptShopCards[cardIndex].card);
 		}else{
 			//no -> display a text stating that not enough health is available
 			notEnoughHealth.SetTrigger("NotEnoughHealth");
-			Debug.Log("Not bought");
 		}
 	}
 
