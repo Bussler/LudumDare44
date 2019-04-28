@@ -1917,16 +1917,6 @@ Prefab:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 428466204}
-    - target: {fileID: 114162778152337280, guid: 8502b8a73c6053741a6ef75b044ea894,
-        type: 2}
-      propertyPath: movementSpeed
-      value: 93.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114162778152337280, guid: 8502b8a73c6053741a6ef75b044ea894,
-        type: 2}
-      propertyPath: dodgeRollSpeed
-      value: 8.7
-      objectReference: {fileID: 0}
     - target: {fileID: 114335183645754290, guid: 8502b8a73c6053741a6ef75b044ea894,
         type: 2}
       propertyPath: fadeOutAnimator
@@ -2157,7 +2147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

@@ -47,7 +47,10 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         gameObject.GetComponent<CanvasGroup>().blocksRaycasts = false; //turn responsibility to raycasts off, so that we see what zone/other stuff is beneat the card
 
         if (this.GetComponent<DisplayCard>().effectID != -1)
+        {
             GameObject.Find("Player").GetComponent<PlayerManager>().DisplayEffect(this.GetComponent<DisplayCard>().effectID); //activate the display
+            this.transform.SetParent(this.transform.parent.parent); //TODO find better solution for this
+        }
     }
 
 
@@ -100,6 +103,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             Destroy(this.gameObject);
 
         }
+
         
     }
 
