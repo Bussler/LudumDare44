@@ -23,6 +23,7 @@ public class FireBallMovement : MonoBehaviour {
             if (mag<=0.1)
             {
                 Destroy(gameObject);
+
             }
         }
 
