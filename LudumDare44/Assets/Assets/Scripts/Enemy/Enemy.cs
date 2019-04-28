@@ -123,7 +123,9 @@ public class Enemy : MonoBehaviour {
             time = 0;
             isAttacking = true;
             int x = Random.Range(0, attacks.Count);
-
+            if (attacks[x] == "Teleport" && Random.Range(0, 100) > 10)
+                x = Random.Range(0, attacks.Count);
+            
             string s = attacks[x];
             //Debug.Log(s);
             switch (s)

@@ -29,6 +29,9 @@ public class PlayerManager : MonoBehaviour{
 	
 	private bool playEffect = false;
 
+	[SerializeField]
+	private Button continueButtonUI;
+	
 	[SerializeField] private Material[] groundMaterials;
 	
 	[SerializeField] 
@@ -117,6 +120,7 @@ public class PlayerManager : MonoBehaviour{
 			playerMovementScript.enabled = true;
 			effectTimer = 0;
 			limitBar.sizeDelta = new Vector2(effectTimer, healthBar.sizeDelta.y);
+			
 		}
 		if (!wasInShop && notInShop && effectTimer < LimitGougeTimer)
         {
@@ -193,6 +197,7 @@ public class PlayerManager : MonoBehaviour{
 	
 	//fades th whole sop in
 	private void playShopFadeIn(){
+		continueButtonUI.enabled = true;
 		playerMovementScript.stop();
 		wasInShop = true;
 		notInShop = false;
@@ -241,6 +246,7 @@ public class PlayerManager : MonoBehaviour{
 
 	//called by continue button
 	public void continueButton(){
+		continueButtonUI.enabled = false;
 		playShopFadeOut();
 		BuySceneEnded();
 	}
@@ -280,6 +286,7 @@ public class PlayerManager : MonoBehaviour{
 
 	private void resetPlayer(){
 		playerCurrentHealth = playerHealth;
+		healthBar.sizeDelta=new Vector2(playerCurrentHealth, healthBar.sizeDelta.y);
 		transform.position = new Vector3(-67, 1, 0);
 		playerMovementScript.reset();
 		for(int i = 0; i <= myCanvas.transform.childCount; i++){
