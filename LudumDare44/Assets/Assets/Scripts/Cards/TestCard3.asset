@@ -16,4 +16,4 @@ MonoBehaviour:
   myType: 1
   effectID: 3
   attack: 4
-  imageName: Tex_Adventurer
+  imageName: heal

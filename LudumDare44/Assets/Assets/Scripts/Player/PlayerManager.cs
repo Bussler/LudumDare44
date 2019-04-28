@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Experimental.PlayerLoop;
 using UnityEngine.UI;
+using Random = System.Random;
 
 public class PlayerManager : MonoBehaviour{
 
@@ -73,6 +74,9 @@ public class PlayerManager : MonoBehaviour{
 	        displayCardScriptShopCards[i] = shopCards[i].GetComponent<DisplayCard>();
 	        draggableShopCards[i] = shopCards[i].GetComponent<Draggable>();
         }
+        
+        currentBossPrefab = currentBossPrefab = Instantiate(enemies[currentBoss], new Vector3(0, 1, 0), enemies[currentBoss].transform.rotation);
+        
 		//battleWon();
     }
 	
@@ -237,27 +241,44 @@ public class PlayerManager : MonoBehaviour{
 	[SerializeField]
 	private Animator fadeOutAnimator;
 
+	private int groundMaterialIndex = 4, currentBoss = 0;
+
+	private GameObject currentBossPrefab;
+	
+	[SerializeField]
+	private GameObject[] enemies;
+	
 	private void resetLevel(){
 		fadeOutAnimator.SetTrigger("PlayFadeOut");
 		resetPlayer();
-		//chooseNewBoss
-		
-		
-		
+		chooseNewBoss();
+		int newGroundMaterial = UnityEngine.Random.Range(0, groundMaterials.Length);
+		Destroy(currentBossPrefab);
+		while(newGroundMaterial == groundMaterialIndex)
+			newGroundMaterial = UnityEngine.Random.Range(0, groundMaterials.Length);
+		groundMaterialIndex = newGroundMaterial;
 		fadeOutAnimator.SetTrigger("PlayFadeIn");
+		currentBossPrefab = Instantiate(enemies[currentBoss], new Vector3(0, 1, 0), enemies[currentBoss].transform.rotation);
 		playerMovementScript.enabled = true;
 	}
 	
 
 	private void resetPlayer(){
 		playerCurrentHealth = playerHealth;
-		transform.position = new Vector3(0, 1, 0);
+		transform.position = new Vector3(-67, 1, 0);
 		playerMovementScript.reset();
 		for(int i = 0; i < myCanvas.transform.childCount; i++){
 			Destroy(myCanvas.transform.GetChild(0));
 		}
 	}
-	
+
+	private void chooseNewBoss(){
+		int newBoss = UnityEngine.Random.Range(0, enemies.Length);
+		while (newBoss == currentBoss){
+			newBoss = UnityEngine.Random.Range(0, enemies.Length);
+		}
+		currentBoss = newBoss;
+	}
 	
 	
 }

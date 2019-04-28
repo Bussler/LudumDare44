@@ -16,4 +16,4 @@ MonoBehaviour:
   myType: 1
   effectID: 7
   attack: 7
-  imageName: Tex_Adventurer
+  imageName: shield
