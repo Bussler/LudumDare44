@@ -286,6 +286,7 @@ public class Enemy : MonoBehaviour {
 
     public void Die()
     {
+        player.GetComponent<PlayerManager>().battleWon();
         Destroy(this.gameObject);
     }
 
