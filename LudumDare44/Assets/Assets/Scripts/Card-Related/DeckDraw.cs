@@ -16,7 +16,7 @@ public class DeckDraw : MonoBehaviour, IPointerClickHandler
     }
 
     public void spawnCard(Card c, Transform hand){
-        GameObject card = Instantiate(cardPrefab) as GameObject;
+        GameObject card = Instantiate(cardPrefab, playerhand.transform) as GameObject;
         card.GetComponent<DisplayCard>().card = c;
         card.GetComponent<DisplayCard>().applyInfo();
         card.transform.SetParent(playerhand.transform);

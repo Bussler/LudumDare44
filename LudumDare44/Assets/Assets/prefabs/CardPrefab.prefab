@@ -121,7 +121,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -143,8 +143,8 @@ MonoBehaviour:
   m_MinHeight: -1
   m_PreferredWidth: 115.3
   m_PreferredHeight: 214.86
-  m_FlexibleWidth: 1
-  m_FlexibleHeight: 1
+  m_FlexibleWidth: 0
+  m_FlexibleHeight: 0
   m_LayoutPriority: 1
 --- !u!114 &114053706234028728
 MonoBehaviour:
@@ -195,6 +195,7 @@ MonoBehaviour:
   imageName: 
   desc: {fileID: 114327665013100966}
   attack: {fileID: 114053706234028728}
+  effectID: 0
 --- !u!114 &114327665013100966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -241,6 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lastParent: {fileID: 0}
   currentDropzone: {fileID: 0}
+  originalParent: {fileID: 0}
   myType: 0
 --- !u!114 &114556073350428932
 MonoBehaviour:

@@ -94,10 +94,13 @@ public class PlayerManager : MonoBehaviour{
             {
                 timeIsFreezed = true; //TODO actually freeze time
                 Time.timeScale = 0;
-                myCanvas.gameObject.SetActive(true);
+
+                myCanvas.gameObject.SetActive(true);//enable card canvas
+                GameObject.Find("DeckManager").GetComponent<DeckManager>().handleHand(); //redraw cards
 
                 effectTimer = 0;
                 Debug.Log("Can use ability");
+
             }
 
         }

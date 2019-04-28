@@ -1335,7 +1335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1530477320
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1967,11 +1967,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114363849697892426, guid: 41d0accab54f84246ac4ad679ead59f4,
-        type: 2}
-      propertyPath: PlayerDeck.Array.size
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4065776010779670, guid: 41d0accab54f84246ac4ad679ead59f4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 942.803
@@ -2006,10 +2001,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114363849697892426, guid: 41d0accab54f84246ac4ad679ead59f4,
         type: 2}
-      propertyPath: PlayerDeck.Array.data[3]
+      propertyPath: playerHand
       value: 
-      objectReference: {fileID: 11400000, guid: dcf080f2021194d41a4c2577919dbfec,
-        type: 2}
+      objectReference: {fileID: 382413975}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d0accab54f84246ac4ad679ead59f4, type: 2}
   m_IsPrefabAsset: 0
