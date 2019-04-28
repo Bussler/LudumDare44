@@ -103,7 +103,7 @@ MonoBehaviour:
   time: 5
   dmg: 20
   doesDmg: 0
-  timeInterval: 0.5
+  timeInterval: 1
 --- !u!135 &135210055001597878
 SphereCollider:
   m_ObjectHideFlags: 1
