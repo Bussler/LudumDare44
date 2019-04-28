@@ -815,6 +815,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d0accab54f84246ac4ad679ead59f4, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &390114126 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114363849697892426, guid: 41d0accab54f84246ac4ad679ead59f4,
+    type: 2}
+  m_PrefabInternal: {fileID: 390114125}
+  m_Script: {fileID: 11500000, guid: 2883bcc3778b5e749a4e4fb4baa44f45, type: 3}
 --- !u!1 &412597249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,6 +1070,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1342376248368342, guid: 8502b8a73c6053741a6ef75b044ea894,
     type: 2}
   m_PrefabInternal: {fileID: 1403716374}
+--- !u!114 &576596971 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114335183645754290, guid: 8502b8a73c6053741a6ef75b044ea894,
+    type: 2}
+  m_PrefabInternal: {fileID: 1403716374}
+  m_Script: {fileID: 11500000, guid: 448b2574f13b1554eb718ab9c13a199d, type: 3}
 --- !u!1 &671687831
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,7 +1152,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 576596971}
         m_MethodName: continueButton
         m_Mode: 1
         m_Arguments:
@@ -1807,7 +1819,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 576596971}
         m_MethodName: playCardBuy
         m_Mode: 3
         m_Arguments:
@@ -1838,6 +1850,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1230575839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1230575835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a5f31ec9defd54fbedee56a7983569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastParent: {fileID: 0}
+  currentDropzone: {fileID: 0}
+  originalParent: {fileID: 0}
+  myType: 0
 --- !u!1001 &1403716374
 Prefab:
   m_ObjectHideFlags: 0
@@ -1922,6 +1949,16 @@ Prefab:
       propertyPath: fadeOutAnimator
       value: 
       objectReference: {fileID: 1679741092}
+    - target: {fileID: 114335183645754290, guid: 8502b8a73c6053741a6ef75b044ea894,
+        type: 2}
+      propertyPath: deckManager
+      value: 
+      objectReference: {fileID: 390114126}
+    - target: {fileID: 114335183645754290, guid: 8502b8a73c6053741a6ef75b044ea894,
+        type: 2}
+      propertyPath: LimitGougeTimer
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8502b8a73c6053741a6ef75b044ea894, type: 2}
   m_IsPrefabAsset: 0
@@ -2517,7 +2554,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 576596971}
         m_MethodName: playCardBuy
         m_Mode: 3
         m_Arguments:
@@ -2548,6 +2585,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1856985466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1856985462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a5f31ec9defd54fbedee56a7983569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastParent: {fileID: 0}
+  currentDropzone: {fileID: 0}
+  originalParent: {fileID: 0}
+  myType: 0
 --- !u!1 &1921229214
 GameObject:
   m_ObjectHideFlags: 0
@@ -2792,7 +2844,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 576596971}
         m_MethodName: playCardBuy
         m_Mode: 3
         m_Arguments:
@@ -2823,6 +2875,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2079427374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2079427369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a5f31ec9defd54fbedee56a7983569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastParent: {fileID: 0}
+  currentDropzone: {fileID: 0}
+  originalParent: {fileID: 0}
+  myType: 0
 --- !u!1 &2127987303
 GameObject:
   m_ObjectHideFlags: 0

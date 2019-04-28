@@ -99,5 +99,13 @@ public class DeckManager : MonoBehaviour {
 
     }
 
+    public Card[] get3RandomShopCards(){
+        Card[] shopCards = new Card[3];
+        shopCards[0] = CardPool[Random.Range(0, CardPool.Count)];
+        shopCards[1] = CardPool[Random.Range(0, CardPool.Count)];
+        shopCards[2] = CardPool[Random.Range(0, CardPool.Count)];
+        return shopCards;
+    }
+
 
 }

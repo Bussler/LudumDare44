@@ -21,7 +21,7 @@ public class HealEffect : BaseEffect {
         PlayerManager plM = GameObject.FindObjectOfType<PlayerManager>();
         if (plM != null)
         {
-            plM.GetHealth(HealAmount);
+            plM.increaseHealth(HealAmount);
             Debug.Log("Player healed");
         }
 

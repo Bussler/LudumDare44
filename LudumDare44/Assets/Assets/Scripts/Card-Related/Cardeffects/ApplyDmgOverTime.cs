@@ -37,7 +37,7 @@ public class ApplyDmgOverTime : MonoBehaviour {
                 PlayerManager plM = GameObject.FindObjectOfType<PlayerManager>();
                 if (plM != null)
                 {
-                    plM.GetHealth(dmg);
+                    plM.increaseHealth(dmg);
                     Debug.Log("Player healed");
                 }
             }

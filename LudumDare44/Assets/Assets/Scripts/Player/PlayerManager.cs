@@ -16,6 +16,8 @@ public class PlayerManager : MonoBehaviour{
 
 	private float effectTimer;
 
+	private Movement playerMovementScript;
+	
 	[SerializeField] 
 	private Camera mainCamera;
 	
@@ -31,13 +33,14 @@ public class PlayerManager : MonoBehaviour{
 
     [SerializeField]
     private GameObject myCanvas;
-    
-	
+
+    [SerializeField] 
+    private DeckManager deckManager;
 	
 
 	// Use this for initialization
 	void Start () {
-	
+		
 		playerCurrentHealth = playerHealth;
 		
 		playerAbilities = new BaseEffect[8];
@@ -55,10 +58,14 @@ public class PlayerManager : MonoBehaviour{
         playerAbilities[7] = new AOEDamage(ShieldAoe, mainCamera);
 
 
+        playerMovementScript = GetComponent<Movement>();
+
         for (int i = 0; i < 3; i++){
 	        cards[i] = shopCards[i].GetComponent<Animator>();
+	        displayCardScriptShopCards[i] = shopCards[i].GetComponent<DisplayCard>();
+	        draggableShopCards[i] = shopCards[i].GetComponent<Draggable>();
         }
-
+		playShopFadeIn();
     }
 	
 	// Update is called once per frame
@@ -67,6 +74,7 @@ public class PlayerManager : MonoBehaviour{
 		if (playerCurrentHealth <= 0){
 			Die();
 		}
+		Debug.Log("Playerhealth: " + playerCurrentHealth);
 	}
 
     public void DisplayEffect(int i)
@@ -120,8 +128,10 @@ public class PlayerManager : MonoBehaviour{
 		playerCurrentHealth -= amount;
 	}
 
-	public void GetHealth(int amount)
-	{
+	public void increaseHealth(int amount){
+		playerCurrentHealth += amount;
+		if (playerCurrentHealth > playerHealth)
+			playerCurrentHealth = playerHealth;
 
 	}
 
@@ -144,17 +154,28 @@ public class PlayerManager : MonoBehaviour{
 	[SerializeField]
 	private GameObject[] shopCards;
 	
+	private DisplayCard[] displayCardScriptShopCards = new DisplayCard[3];  
 	private Animator[] cards;
 	
 	[SerializeField]
 	private Animator shop, notEnoughHealth;
 
 	[SerializeField] private TextMeshProUGUI healthText;
+	private Draggable[] draggableShopCards = new Draggable[3];
 	
 	private string remHealth = "Remaining Health: ";
 	
 	//fades th whole sop in
 	private void playShopFadeIn(){
+		playerMovementScript.enabled = false;
+		Card[] chosenPoolCards = deckManager.get3RandomShopCards();
+		for (int i = 0; i < 3; i++){
+			draggableShopCards[i].enabled = true;
+			displayCardScriptShopCards[i].card = chosenPoolCards[i];
+			displayCardScriptShopCards[i].applyInfo();
+			draggableShopCards[i].enabled = false;
+		}
+		
 		shop.SetTrigger("PlayFadeIn");
 		healthText.text = remHealth + playerCurrentHealth;
 	}
@@ -175,10 +196,12 @@ public class PlayerManager : MonoBehaviour{
 			cards[cardIndex].SetTrigger("PlayBuyAnimation");	//buy animation
 			playerCurrentHealth -= cardCost;						//update health
 			healthText.text = remHealth + playerCurrentHealth;		//update text
-			//TODO Add the card at the index to the deck			
+			//TODO Add the card at the index to the deck
+			Debug.Log("bought");
 		}else{
 			//no -> display a text stating that not enough health is available
 			notEnoughHealth.SetTrigger("NotEnoughHealth");
+			Debug.Log("Not bought");
 		}
 	}
 
@@ -207,7 +230,8 @@ public class PlayerManager : MonoBehaviour{
 		//resetPlayer
 		//chooseNewBoss
 		//resetLevel
-		fadeOutAnimator.SetTrigger("PlayFadeIn");
+	//	fadeOutAnimator.SetTrigger("PlayFadeIn");
+		playerMovementScript.enabled = true;
 	}
 	
 }
