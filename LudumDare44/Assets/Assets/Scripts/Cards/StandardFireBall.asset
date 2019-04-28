@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: StandardFireBall
   m_EditorClassIdentifier: 
   cardName: FireBall
-  description: Shoots a fireball
+  description: Shoots a fireball at target location
   myType: 1
   effectID: 0
   attack: 0

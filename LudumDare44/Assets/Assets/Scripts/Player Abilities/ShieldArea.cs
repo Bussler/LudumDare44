@@ -30,12 +30,19 @@ public class ShieldArea : MonoBehaviour {
         }
     }
 
+
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.name == "Player")
         {
             other.gameObject.GetComponent<BoxCollider>().enabled = true;
         }
+    }
+
+    private void OnDestroy()
+    {
+        GameObject.Find("Player").GetComponent<BoxCollider>().enabled = true;
+
     }
 
 }
